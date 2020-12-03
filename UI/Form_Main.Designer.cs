@@ -44,7 +44,7 @@
             this.btn_DoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
             this.rbPage_ChucNang = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btn_QuanLyKhachHang = new DevExpress.XtraBars.BarButtonItem();
+            this.btn_QuanLyNhanVien = new DevExpress.XtraBars.BarButtonItem();
             this.btn_QuanLyCongTrinh = new DevExpress.XtraBars.BarButtonItem();
             this.btn_QuanLyDanhMuc = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -193,20 +193,21 @@
             // 
             // ribbonPageGroup13
             // 
-            this.ribbonPageGroup13.ItemLinks.Add(this.btn_QuanLyKhachHang);
+            this.ribbonPageGroup13.ItemLinks.Add(this.btn_QuanLyNhanVien);
             this.ribbonPageGroup13.ItemLinks.Add(this.btn_QuanLyCongTrinh);
             this.ribbonPageGroup13.ItemLinks.Add(this.btn_QuanLyDanhMuc);
             this.ribbonPageGroup13.Name = "ribbonPageGroup13";
             this.ribbonPageGroup13.Text = "Quản Lý Tài Nguyên";
             // 
-            // btn_QuanLyKhachHang
+            // btn_QuanLyNhanVien
             // 
-            this.btn_QuanLyKhachHang.Caption = "Quản Lý Nhân Viên";
-            this.btn_QuanLyKhachHang.Id = 42;
-            this.btn_QuanLyKhachHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_QuanLyKhachHang.ImageOptions.Image")));
-            this.btn_QuanLyKhachHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_QuanLyKhachHang.ImageOptions.LargeImage")));
-            this.btn_QuanLyKhachHang.Name = "btn_QuanLyKhachHang";
-            this.btn_QuanLyKhachHang.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_QuanLyNhanVien.Caption = "Quản Lý Nhân Viên";
+            this.btn_QuanLyNhanVien.Id = 42;
+            this.btn_QuanLyNhanVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_QuanLyNhanVien.ImageOptions.Image")));
+            this.btn_QuanLyNhanVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_QuanLyNhanVien.ImageOptions.LargeImage")));
+            this.btn_QuanLyNhanVien.Name = "btn_QuanLyNhanVien";
+            this.btn_QuanLyNhanVien.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btn_QuanLyNhanVien.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_QuanLyNhanVien_ItemClick);
             // 
             // btn_QuanLyCongTrinh
             // 
@@ -254,6 +255,7 @@
             this.btnChamCong.LargeWidth = 70;
             this.btnChamCong.Name = "btnChamCong";
             this.btnChamCong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnChamCong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChamCong_ItemClick);
             // 
             // ribbonPageGroup1
             // 
@@ -389,7 +391,7 @@
             this.btn_PDA_NV_ReportCongTrinh,
             this.btn_PDA_TPB_ChamCong,
             this.btn_PDA_TPB_QuanLyLuong,
-            this.btn_QuanLyKhachHang,
+            this.btn_QuanLyNhanVien,
             this.btn_PDA_NV_LienHe,
             this.btn_PDA_NV_ReportNhanVienNghi,
             this.btn_PDA_NV_ReportCongTrinhHT,
@@ -569,7 +571,7 @@
         private DevExpress.XtraBars.BarButtonItem btn_DoiMatKhau;
         private DevExpress.XtraBars.Ribbon.RibbonPage rbPage_ChucNang;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
-        private DevExpress.XtraBars.BarButtonItem btn_QuanLyKhachHang;
+        private DevExpress.XtraBars.BarButtonItem btn_QuanLyNhanVien;
         private DevExpress.XtraBars.BarButtonItem btn_QuanLyCongTrinh;
         private DevExpress.XtraBars.BarButtonItem btn_QuanLyDanhMuc;
         private DevExpress.XtraBars.BarButtonItem btn_DangNhap;

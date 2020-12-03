@@ -8,14 +8,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using BLL;
+using Entities;
 
 namespace UI
 {
     public partial class Form_ThongTinCaNhan : DevExpress.XtraEditors.XtraForm
     {
+
+        NhanVienBLL nvBLL;
+        PhongBanBLL pbBLL;
+
         public Form_ThongTinCaNhan()
         {
             InitializeComponent();
+
+            nvBLL = new NhanVienBLL();
+            pbBLL = new PhongBanBLL();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -26,6 +35,67 @@ namespace UI
         private void Form_ThongTinCaNhan_FormClosed(object sender, FormClosedEventArgs e)
         {
             Form_Main.f_ThongTinCaNhan = true;
+        }
+
+        private void textEdit3_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_ThongTinCaNhan_Load(object sender, EventArgs e)
+        {
+            loadDataNhanVien();
+        }
+
+        private void loadDataNhanVien()
+        {
+            eNhanVien a = nvBLL.getNhanVienById(Form_Main.idNhanVienDangNhap);
+            ePhongBan aa = pbBLL.getPhongBanById(a.idPhongBan);
+
+            tbMaNV.Text = a.idNhanVien;
+            tbTenNV.Text = a.tenNhanVien;
+            tbDiaChi.Text = a.diaChi;
+            tbSDT.Text = a.sdt;
+            tbPhongBan.Text = aa.tenPhongBan;
+            if(a.chucVu == 0)
+            {
+                tbChucVu.Text = "Quản lý";
+            }
+            else
+            {
+                tbChucVu.Text = "Nhân viên";
+            }
+
+            
+        }
+
+        public void enableOptions(bool e)
+        {
+            tbTenNV.Enabled = tbDiaChi.Enabled = tbSDT.Enabled = btnLuu.Enabled = e;
+            btnSua.Enabled = !e;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            enableOptions(true);
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            eNhanVien a = new eNhanVien(Form_Main.idNhanVienDangNhap, tbTenNV.Text, tbDiaChi.Text, tbSDT.Text, true);
+            bool kq = nvBLL.capNhatNhanVien(a);
+
+            if (kq)
+            {
+                XtraMessageBox.Show("Cập nhật thông tin thành công");
+
+            }
+            else
+            {
+                XtraMessageBox.Show("Cập nhật thông tin thất bại !!!");
+            }
+            enableOptions(false);
+            loadDataNhanVien();
         }
     }
 }

@@ -41,6 +41,9 @@
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.panelQuanLyDM = new System.Windows.Forms.Panel();
+            this.dateNgayHoanThanh = new System.Windows.Forms.DateTimePicker();
+            this.dateNgayKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.dateNgayBatDau = new System.Windows.Forms.DateTimePicker();
             this.comboBoxTrangThai = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -62,9 +65,6 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateNgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.dateNgayKetThuc = new System.Windows.Forms.DateTimePicker();
-            this.dateNgayHoanThanh = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenCongTrinh.Properties)).BeginInit();
             this.panelThaoTac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -223,6 +223,38 @@
             this.panelQuanLyDM.Name = "panelQuanLyDM";
             this.panelQuanLyDM.Size = new System.Drawing.Size(399, 235);
             this.panelQuanLyDM.TabIndex = 53;
+            // 
+            // dateNgayHoanThanh
+            // 
+            this.dateNgayHoanThanh.Checked = false;
+            this.dateNgayHoanThanh.CustomFormat = "dd/MM/yyyy";
+            this.dateNgayHoanThanh.Enabled = false;
+            this.dateNgayHoanThanh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateNgayHoanThanh.Location = new System.Drawing.Point(144, 172);
+            this.dateNgayHoanThanh.Name = "dateNgayHoanThanh";
+            this.dateNgayHoanThanh.Size = new System.Drawing.Size(243, 21);
+            this.dateNgayHoanThanh.TabIndex = 1019;
+            this.dateNgayHoanThanh.Value = new System.DateTime(1900, 1, 1, 7, 0, 0, 0);
+            // 
+            // dateNgayKetThuc
+            // 
+            this.dateNgayKetThuc.CustomFormat = "dd/MM/yyyy";
+            this.dateNgayKetThuc.Enabled = false;
+            this.dateNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateNgayKetThuc.Location = new System.Drawing.Point(144, 139);
+            this.dateNgayKetThuc.Name = "dateNgayKetThuc";
+            this.dateNgayKetThuc.Size = new System.Drawing.Size(243, 21);
+            this.dateNgayKetThuc.TabIndex = 1018;
+            // 
+            // dateNgayBatDau
+            // 
+            this.dateNgayBatDau.CustomFormat = "dd/MM/yyyy";
+            this.dateNgayBatDau.Enabled = false;
+            this.dateNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateNgayBatDau.Location = new System.Drawing.Point(145, 104);
+            this.dateNgayBatDau.Name = "dateNgayBatDau";
+            this.dateNgayBatDau.Size = new System.Drawing.Size(243, 21);
+            this.dateNgayBatDau.TabIndex = 1017;
             // 
             // comboBoxTrangThai
             // 
@@ -457,38 +489,6 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Tên Công Việc";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dateNgayBatDau
-            // 
-            this.dateNgayBatDau.CustomFormat = "dd/MM/yyyy";
-            this.dateNgayBatDau.Enabled = false;
-            this.dateNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayBatDau.Location = new System.Drawing.Point(145, 104);
-            this.dateNgayBatDau.Name = "dateNgayBatDau";
-            this.dateNgayBatDau.Size = new System.Drawing.Size(243, 21);
-            this.dateNgayBatDau.TabIndex = 1017;
-            // 
-            // dateNgayKetThuc
-            // 
-            this.dateNgayKetThuc.CustomFormat = "dd/MM/yyyy";
-            this.dateNgayKetThuc.Enabled = false;
-            this.dateNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayKetThuc.Location = new System.Drawing.Point(144, 139);
-            this.dateNgayKetThuc.Name = "dateNgayKetThuc";
-            this.dateNgayKetThuc.Size = new System.Drawing.Size(243, 21);
-            this.dateNgayKetThuc.TabIndex = 1018;
-            // 
-            // dateNgayHoanThanh
-            // 
-            this.dateNgayHoanThanh.Checked = false;
-            this.dateNgayHoanThanh.CustomFormat = "dd/MM/yyyy";
-            this.dateNgayHoanThanh.Enabled = false;
-            this.dateNgayHoanThanh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayHoanThanh.Location = new System.Drawing.Point(144, 172);
-            this.dateNgayHoanThanh.Name = "dateNgayHoanThanh";
-            this.dateNgayHoanThanh.Size = new System.Drawing.Size(243, 21);
-            this.dateNgayHoanThanh.TabIndex = 1019;
-            this.dateNgayHoanThanh.Value = new System.DateTime(1900, 1, 1, 7, 0, 0, 0);
             // 
             // Form_QLCongTrinh
             // 

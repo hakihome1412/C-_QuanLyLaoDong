@@ -51,6 +51,7 @@ namespace UI
                     //XtraMessageBox.Show("Đăng nhập thành công");
                     this.Close();
                     Form_Main.statusLogin = true;
+                    Form_Main.idNhanVienDangNhap = tbTaiKhoan.Text;
                 }
             }
         }
@@ -91,6 +92,7 @@ namespace UI
                         //XtraMessageBox.Show("Đăng nhập thành công");
                         this.Close();
                         Form_Main.statusLogin = true;
+                        Form_Main.idNhanVienDangNhap = tbTaiKhoan.Text;
                     }
                 }
             }
@@ -117,6 +119,7 @@ namespace UI
                         //XtraMessageBox.Show("Đăng nhập thành công");
                         this.Close();
                         Form_Main.statusLogin = true;
+                        Form_Main.idNhanVienDangNhap = tbTaiKhoan.Text;
                     }
                 }
             }

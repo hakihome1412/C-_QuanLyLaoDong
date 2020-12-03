@@ -9,27 +9,55 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using BLL;
+using Entities;
 
 namespace UI
 {
     public partial class Form_Main : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public static bool statusLogin = false;
+        public static string idNhanVienDangNhap = "";
+        public static string idPhongBan = "";
 
         public static bool f_QLCongTrinh = true;
         public static bool f_QLCongViec = true;
         public static bool f_DoiMatKhau = true;
         public static bool f_ThongTinCaNhan = true;
         public static bool f_PhanCong = true;
+        public static bool f_QLNhanVien = true;
+        public static bool f_ChamCong = true;
+
+        NhanVienBLL nvBLL;
 
         public Form_Main()
         {
             InitializeComponent();
+            nvBLL = new NhanVienBLL();
         }
 
         private void Form_Main_Load(object sender, EventArgs e)
         {
+            int kq = nvBLL.checkChucVuCongViec(idNhanVienDangNhap);
+            eNhanVien nv = nvBLL.getNhanVienById(idNhanVienDangNhap);
+            idPhongBan = nv.idPhongBan;
 
+            if (kq == 1)
+            {
+                btn_QuanLyCongTrinh.Visibility = btn_QuanLyDanhMuc.Visibility = BarItemVisibility.Never;
+
+            }
+
+            if (kq == 2)
+            {
+                btn_QuanLyNhanVien.Visibility = BarItemVisibility.Never;
+                ribbonPageGroup3.Visible = false;
+            }
+
+            if (kq == 3)
+            {
+                ribbonPageGroup3.Visible = ribbonPageGroup13.Visible = false;
+            }
         }
 
         private void ribbonControl1_Click(object sender, EventArgs e)
@@ -165,6 +193,50 @@ namespace UI
         private void ribbonControl1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_QuanLyNhanVien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form_QLNhanVien form = new Form_QLNhanVien();
+
+            if (f_QLNhanVien == true)
+            {
+                form.MdiParent = this;
+                form.Show();
+                f_QLNhanVien = false;
+            }
+            else
+            {
+                foreach (XtraForm item in this.MdiChildren)
+                {
+                    if (item is Form_QLNhanVien)
+                    {
+                        item.Activate();
+                    }
+                }
+            }
+        }
+
+        private void btnChamCong_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form_ChamCong form = new Form_ChamCong();
+
+            if (f_ChamCong == true)
+            {
+                form.MdiParent = this;
+                form.Show();
+                f_ChamCong = false;
+            }
+            else
+            {
+                foreach (XtraForm item in this.MdiChildren)
+                {
+                    if (item is Form_ChamCong)
+                    {
+                        item.Activate();
+                    }
+                }
+            }
         }
     }
 }

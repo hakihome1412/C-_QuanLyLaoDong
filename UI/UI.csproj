@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_ChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChamCong.Designer.cs">
+      <DependentUpon>Form_ChamCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     <Compile Include="Form_QLCongViec.Designer.cs">
       <DependentUpon>Form_QLCongViec.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_QLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_QLNhanVien.Designer.cs">
+      <DependentUpon>Form_QLNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ThongTinCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,9 @@
     <Compile Include="Form_QLCongTrinh.Designer.cs">
       <DependentUpon>Form_QLCongTrinh.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form_ChamCong.resx">
+      <DependentUpon>Form_ChamCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_DangNhap.resx">
       <DependentUpon>Form_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_QLCongViec.resx">
       <DependentUpon>Form_QLCongViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_QLNhanVien.resx">
+      <DependentUpon>Form_QLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ThongTinCaNhan.resx">
       <DependentUpon>Form_ThongTinCaNhan.cs</DependentUpon>

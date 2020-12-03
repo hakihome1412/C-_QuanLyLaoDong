@@ -123,8 +123,11 @@ namespace BLL
                 aa.diaChi = a.diaChi;
                 aa.ngayBatDau = (DateTime)a.ngayBatDau;
                 aa.ngayKetThucDuKien = (DateTime)a.ngayKetThucDuKien;
-                aa.ngayHoanThanh = (DateTime)a.ngayHoanThanh;
                 aa.trangThai = a.trangThai;
+                if(aa.trangThai == "Hoàn Thành")
+                {
+                    aa.ngayHoanThanh = DateTime.Now;
+                }
 
                 db.SubmitChanges();
                 return true;

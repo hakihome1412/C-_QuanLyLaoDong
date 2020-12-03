@@ -49,6 +49,7 @@ namespace BLL
             return eList;
         }
 
+
         public List<eCongViec> getCongViecByIdNhanVien(string idNhanVien)
         {
             List<eCongViec> eList = new List<eCongViec>();
@@ -59,13 +60,65 @@ namespace BLL
                          join d in db.CongViecs on c.idCongViec equals d.idCongViec
                          join e in db.CongTrinhs on c.idCongTrinh equals e.idCongTrinh
                          where a.idNhanVien == idNhanVien && d.isDelete == false && e.isDelete == false
-                         select new { b.id, d.tenCongViec, e.tenCongTrinh }).ToList();
+                         select new { b.id, d.tenCongViec, e.tenCongTrinh, b.ngayBatDau, b.ngayKetThuc }).ToList();
 
             int i = 1;
             foreach (var item in query)
             {
-                eCongViec e = new eCongViec(item.id, item.tenCongViec, item.tenCongTrinh, i++);
+                eCongViec e = new eCongViec(item.id, item.tenCongViec, item.tenCongTrinh, i++, item.ngayBatDau.ToString("dd/MM/yyyy"), item.ngayKetThuc.ToString("dd/MM/yyyy"));
                 eList.Add(e);
+            }
+
+            return eList;
+        }
+
+        public List<eCongViec> getCongViecByIdNhanVien_ChamCong(string idNhanVien)
+        {
+            List<eCongViec> eList = new List<eCongViec>();
+            DateTime dateNow = DateTime.Now;
+            List<DanhSachChamCong> abc = db.DanhSachChamCongs.Where(p => p.idNhanVien == idNhanVien && p.ngayChamcong == dateNow).ToList();
+            
+            var query = (from a in db.NhanViens
+                         join f in db.DanhSachChamCongs on a.idNhanVien equals f.idNhanVien
+                         join b in db.DanhSachPhanCongs on f.idNhanVien equals b.idNhanVien
+                         join c in db.DanhSachCongViecCongTrinhs on b.idDSCongViecCongTrinh equals c.id
+                         join d in db.CongViecs on c.idCongViec equals d.idCongViec
+                         join e in db.CongTrinhs on c.idCongTrinh equals e.idCongTrinh
+                         where a.idNhanVien == idNhanVien && d.isDelete == false && e.isDelete == false && dateNow >= b.ngayBatDau && dateNow <= b.ngayKetThuc && f.ngayChamcong == dateNow
+                         select new { f.idChamCong, b.id, d.tenCongViec, e.tenCongTrinh, b.ngayPhanCong, b.ngayBatDau, b.ngayKetThuc, f.trangThaiChamCong }).ToList();     
+
+            int i = 1;
+            int temp = 1;
+            foreach (var item in query)
+            {
+                if(temp <= abc.Count)
+                {
+                    if(temp == 1)
+                    {
+                        string trangthai = "Chưa Chấm";
+
+                        if (item.trangThaiChamCong == 1)
+                        {
+                            trangthai = "Có Mặt";
+                        }
+                        else
+                        {
+
+                            if (item.trangThaiChamCong == 2)
+                            {
+                                trangthai = "Vắng Mặt";
+                            }
+                        }
+
+                        eCongViec e = new eCongViec(item.idChamCong, item.id, item.tenCongViec, item.tenCongTrinh, i++, item.ngayPhanCong.ToString("dd/MM/yyyy"), item.ngayBatDau.ToString("dd/MM/yyyy"), item.ngayKetThuc.ToString("dd/MM/yyyy"), trangthai);
+                        eList.Add(e);
+                    }               
+                }
+                else
+                {
+                    temp = 0;
+                }
+                temp++;
             }
 
             return eList;

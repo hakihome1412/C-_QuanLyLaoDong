@@ -57,6 +57,7 @@
             this.tbMatKhau.Location = new System.Drawing.Point(199, 175);
             this.tbMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMatKhau.Name = "tbMatKhau";
+            this.tbMatKhau.Properties.UseSystemPasswordChar = true;
             this.tbMatKhau.Size = new System.Drawing.Size(261, 20);
             this.tbMatKhau.TabIndex = 35;
             this.tbMatKhau.EditValueChanged += new System.EventHandler(this.tbMatKhau_EditValueChanged);

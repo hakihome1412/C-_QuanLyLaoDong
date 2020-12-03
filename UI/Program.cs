@@ -22,6 +22,10 @@ namespace UI
             {
                 Application.Run(new Form_Main());
             }
+            else
+            {
+                Application.Run(new Form_DangNhap());
+            }
         }
     }
 }

@@ -16,6 +16,13 @@ namespace Entities
         public String tenCongTrinh { get; set; }
         public int stt { get; set; }
         public int idPhanCong { get; set; }
+        public int idChamCong { get; set; }
+        public int soNguoiThucHienCongViec { get; set; }
+        public String ngayBatDau { get; set; }
+        public String ngayKetThuc { get; set; }
+        public String ngayPhanCong { get; set; }
+
+        public String trangThaiChamCong { get; set; }
 
         public eCongViec(String IdCongViec, String TenCongViec, bool IsDelete)
         {
@@ -30,12 +37,36 @@ namespace Entities
             tenCongViec = TenCongViec;
         }
 
-        public eCongViec(int IdPhanCong, String TenCongViec,string TenCongTrinh, int Stt)
+        public eCongViec(String IdCongViec, String TenCongViec, int SoNguoiThucHienCongViec)
+        {
+            idCongViec = IdCongViec;
+            tenCongViec = TenCongViec;
+            soNguoiThucHienCongViec = SoNguoiThucHienCongViec;
+        }
+
+
+
+        public eCongViec(int IdPhanCong, String TenCongViec,string TenCongTrinh, int Stt, String NgayBatDau, String NgayKetThuc)
         {
             idPhanCong = IdPhanCong;
             tenCongViec = TenCongViec;
             tenCongTrinh = TenCongTrinh;
             stt = Stt;
+            ngayBatDau = NgayBatDau;
+            ngayKetThuc = NgayKetThuc;
+        }
+
+        public eCongViec(int IdChamCong, int IdPhanCong, String TenCongViec, string TenCongTrinh, int Stt, String NgayPhanCong, String NgayBatDau, String NgayKetThuc, String TrangThaiChamCong)
+        {
+            idChamCong = IdChamCong;
+            idPhanCong = IdPhanCong;
+            tenCongViec = TenCongViec;
+            tenCongTrinh = TenCongTrinh;
+            stt = Stt;
+            ngayPhanCong = NgayPhanCong;
+            ngayBatDau = NgayBatDau;
+            ngayKetThuc = NgayKetThuc;
+            trangThaiChamCong = TrangThaiChamCong;
         }
 
         public eCongViec(String TenCongViec)

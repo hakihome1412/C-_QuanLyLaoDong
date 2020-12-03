@@ -30,5 +30,14 @@ namespace BLL
 
             return eList;
         }
+
+        public ePhongBan getPhongBanById(string id)
+        {
+            PhongBan aa = db.PhongBans.Where(p => p.idPhongBan == id).SingleOrDefault();
+
+            ePhongBan a = new ePhongBan(aa.idPhongBan, aa.tenPhongBan);
+
+            return a;
+        }
     }
 }
