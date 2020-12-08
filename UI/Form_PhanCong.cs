@@ -88,9 +88,9 @@ namespace UI
             DateTime ngayKetThuc = (DateTime)dateNgayKetThuc.Value;
             string tenNhanVien = dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[1].Value.ToString();
 
-            if(ngayBatDau > ngayKetThuc)
+            if(ngayBatDau >= ngayKetThuc)
             {
-                XtraMessageBox.Show("Ngày bắt đầu công việc phải trước hoặc bằng ngày kết thúc công việc");
+                XtraMessageBox.Show("Ngày bắt đầu công việc phải nhỏ hơn hoặc bằng ngày kết thúc công việc");
             }
             else
             {

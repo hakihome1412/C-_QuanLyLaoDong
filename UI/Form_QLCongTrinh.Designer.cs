@@ -501,6 +501,7 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "Form_QLCongTrinh";
             this.Text = "Quản Lý Công Trình";
+            this.Activated += new System.EventHandler(this.Form_QLCongTrinh_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_QLCongTrinh_FormClosed);
             this.Load += new System.EventHandler(this.Form_QLCongTrinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tbTenCongTrinh.Properties)).EndInit();

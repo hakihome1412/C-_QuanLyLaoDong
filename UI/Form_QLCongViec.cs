@@ -51,6 +51,11 @@ namespace UI
         private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             loadDataDetailCongViec();
+            btnXoa.Enabled = btnCapNhat.Enabled = btnThem.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
+            enableOptions(false);
+            btnLuu.Enabled = false;
+            btnThem.Text = "Thêm Mới";
+            trangThaiLuu = -1;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -197,51 +202,67 @@ namespace UI
         {
             if (trangThaiLuu == 0) // Thêm
             {
-                eCongViec a = new eCongViec(tbTenCongViec.Text);
-                bool kq = cvBLL.themCongViec(a);
-
-                if (kq)
+                if(tbTenCongViec.Text.Trim().Length == 0)
                 {
-                    XtraMessageBox.Show("Thêm công việc thành công");
-
+                    XtraMessageBox.Show("Vui lòng nhập đầy đủ dữ liệu cho công việc mới!");
                 }
                 else
                 {
-                    XtraMessageBox.Show("Thêm công việc thất bại !!!");
-                }
+                    eCongViec a = new eCongViec(tbTenCongViec.Text);
+                    bool kq = cvBLL.themCongViec(a);
 
-                dataGridView3.DataSource = null;
-                dataGridView3.DataSource = cvBLL.getAllCongViec();
-                loadDataDetailCongViec();
-                btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
-                btnLuu.Enabled = false;
-                enableOptions(false);
-                trangThaiLuu = -1;
-                btnThem.Text = "Thêm mới";
+                    if (kq)
+                    {
+                        XtraMessageBox.Show("Thêm công việc thành công");
+
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Thêm công việc thất bại !!!");
+                    }
+
+                    dataGridView3.DataSource = null;
+                    dataGridView3.DataSource = cvBLL.getAllCongViec();
+                    loadDataDetailCongViec();
+                    btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
+                    btnLuu.Enabled = false;
+                    enableOptions(false);
+                    trangThaiLuu = -1;
+                    btnThem.Text = "Thêm Mới";
+                }
+              
             }
             else //Cập nhật
             {
-                eCongViec a = new eCongViec(dataGridView3.CurrentRow.Cells[0].Value.ToString(), tbTenCongViec.Text);
-                bool kq = cvBLL.capNhatCongViec(a);
-
-                if (kq)
+                if (tbTenCongViec.Text.Trim().Length == 0)
                 {
-                    XtraMessageBox.Show("Cập nhật công việc thành công");
-
+                    XtraMessageBox.Show("Vui lòng nhập đầy đủ dữ liệu cho công việc!");
                 }
                 else
                 {
-                    XtraMessageBox.Show("Cập nhật công việc thất bại !!!");
-                }
+                    eCongViec a = new eCongViec(dataGridView3.CurrentRow.Cells[0].Value.ToString(), tbTenCongViec.Text);
+                    bool kq = cvBLL.capNhatCongViec(a);
 
-                dataGridView3.DataSource = null;
-                dataGridView3.DataSource = cvBLL.getAllCongViec();
-                dataGridView2.DataSource = null;
-                dataGridView2.DataSource = cvBLL.getCongViecByIdCongTrinh(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                loadDataDetailCongViec();
-                btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
-                btnLuu.Enabled = false;
-                enableOptions(false);
+                    if (kq)
+                    {
+                        XtraMessageBox.Show("Cập nhật công việc thành công");
+
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Cập nhật công việc thất bại !!!");
+                    }
+
+                    dataGridView3.DataSource = null;
+                    dataGridView3.DataSource = cvBLL.getAllCongViec();
+                    dataGridView2.DataSource = null;
+                    dataGridView2.DataSource = cvBLL.getCongViecByIdCongTrinh(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                    loadDataDetailCongViec();
+                    btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
+                    btnLuu.Enabled = false;
+                    enableOptions(false);
+                }
+              
             }
         }
 
@@ -251,6 +272,11 @@ namespace UI
             btnCapNhat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = false;
             btnLuu.Enabled = true;
             enableOptions(true);
+        }
+
+        private void Form_QLCongViec_Activated(object sender, EventArgs e)
+        {
+            loadDataDetailCongViec();
         }
     }
 }

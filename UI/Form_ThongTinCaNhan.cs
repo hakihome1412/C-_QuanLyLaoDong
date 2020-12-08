@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BLL;
 using Entities;
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -82,19 +83,39 @@ namespace UI
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            eNhanVien a = new eNhanVien(Form_Main.idNhanVienDangNhap, tbTenNV.Text, tbDiaChi.Text, tbSDT.Text, true);
-            bool kq = nvBLL.capNhatNhanVien(a);
-
-            if (kq)
+            if(tbTenNV.Text.Trim().Length == 0 || tbSDT.Text.Trim().Length == 0 || tbDiaChi.Text.Trim().Length == 0)
             {
-                XtraMessageBox.Show("Cập nhật thông tin thành công");
-
+                XtraMessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
             }
             else
             {
-                XtraMessageBox.Show("Cập nhật thông tin thất bại !!!");
+                if (!Regex.IsMatch(tbSDT.Text, "0([1-9]){9}"))
+                {
+                    XtraMessageBox.Show("Số điện thoại không hợp lệ!");
+                }
+                else
+                {
+                    eNhanVien a = new eNhanVien(Form_Main.idNhanVienDangNhap, tbTenNV.Text, tbDiaChi.Text, tbSDT.Text, true);
+                    bool kq = nvBLL.capNhatNhanVien(a);
+
+                    if (kq)
+                    {
+                        XtraMessageBox.Show("Cập nhật thông tin thành công");
+
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Cập nhật thông tin thất bại !!!");
+                    }
+                    enableOptions(false);
+                    loadDataNhanVien();
+                }
             }
-            enableOptions(false);
+          
+        }
+
+        private void Form_ThongTinCaNhan_Activated(object sender, EventArgs e)
+        {
             loadDataNhanVien();
         }
     }

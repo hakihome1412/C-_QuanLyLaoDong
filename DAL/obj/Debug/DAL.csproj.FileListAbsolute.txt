@@ -8,7 +8,6 @@ C:\Users\ADMIN\OneDrive\Desktop\QuanLyLaoDong_Nhom2\QLLaoDong\DAL\obj\Debug\DAL.
 D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\DAL\bin\Debug\DAL.dll.config
 D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\DAL\bin\Debug\DAL.dll
 D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\DAL\bin\Debug\DAL.pdb
-D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\DAL\obj\Debug\DAL.dll
 D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\DAL\obj\Debug\DAL.pdb

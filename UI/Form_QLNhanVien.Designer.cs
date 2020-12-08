@@ -45,12 +45,12 @@
             this.tbTenNhanVien = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.idNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.panelThaoTac.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
@@ -255,19 +255,6 @@
             this.dataGridView1.TabIndex = 56;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // groupControl3
-            // 
-            this.groupControl3.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.groupControl3.Appearance.Options.UseBackColor = true;
-            this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.groupControl3.Controls.Add(this.dataGridView1);
-            this.groupControl3.Location = new System.Drawing.Point(423, 11);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(736, 422);
-            this.groupControl3.TabIndex = 62;
-            this.groupControl3.Text = "Danh Sách Nhân Viên Trong Phòng Ban";
-            // 
             // idNhanVien
             // 
             this.idNhanVien.DataPropertyName = "idNhanVien";
@@ -301,6 +288,19 @@
             this.sdt.Name = "sdt";
             this.sdt.ReadOnly = true;
             // 
+            // groupControl3
+            // 
+            this.groupControl3.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl3.Appearance.Options.UseBackColor = true;
+            this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.groupControl3.Controls.Add(this.dataGridView1);
+            this.groupControl3.Location = new System.Drawing.Point(423, 11);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(736, 422);
+            this.groupControl3.TabIndex = 62;
+            this.groupControl3.Text = "Danh Sách Nhân Viên Trong Phòng Ban";
+            // 
             // Form_QLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,6 +311,7 @@
             this.Controls.Add(this.groupControl2);
             this.Name = "Form_QLNhanVien";
             this.Text = "Quản Lý Nhân Viên";
+            this.Activated += new System.EventHandler(this.Form_QLNhanVien_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_QLNhanVien_FormClosed);
             this.Load += new System.EventHandler(this.Form_QLNhanVien_Load);
             this.panelThaoTac.ResumeLayout(false);

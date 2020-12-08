@@ -30,6 +30,15 @@
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dataGridView_CongViecCuaNhanVien = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.label1 = new System.Windows.Forms.Label();
             this.tbTimKiemNhanVien = new DevExpress.XtraEditors.TextEdit();
@@ -40,15 +49,6 @@
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnXoaPhanCongCongViec = new DevExpress.XtraEditors.SimpleButton();
             this.btnPhanCongViec = new DevExpress.XtraEditors.SimpleButton();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CongViecCuaNhanVien)).BeginInit();
@@ -100,6 +100,81 @@
             this.dataGridView_CongViecCuaNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_CongViecCuaNhanVien.Size = new System.Drawing.Size(708, 396);
             this.dataGridView_CongViecCuaNhanVien.TabIndex = 56;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "stt";
+            this.dataGridViewTextBoxColumn12.FillWeight = 95.84665F;
+            this.dataGridViewTextBoxColumn12.HeaderText = "STT";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "tenCongTrinh";
+            this.dataGridViewTextBoxColumn13.FillWeight = 300.3085F;
+            this.dataGridViewTextBoxColumn13.HeaderText = "Tên Công Trình";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "tenCongViec";
+            this.dataGridViewTextBoxColumn14.FillWeight = 68.10609F;
+            this.dataGridViewTextBoxColumn14.HeaderText = "Tên Công Việc";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Width = 150;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "idPhanCong";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "idChamCong";
+            this.Column6.HeaderText = "ID Chấm Công";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "ngayPhanCong";
+            this.Column4.HeaderText = "Ngày Phân Công";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "ngayBatDau";
+            this.Column2.FillWeight = 36.51944F;
+            this.Column2.HeaderText = "Ngày Bắt Đầu";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "ngayKetThuc";
+            this.Column3.FillWeight = 36.51944F;
+            this.Column3.HeaderText = "Ngày Kết Thúc";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "trangThaiChamCong";
+            this.Column5.HeaderText = "Trạng Thái";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // groupControl6
             // 
@@ -222,81 +297,6 @@
             this.btnPhanCongViec.TabIndex = 8;
             this.btnPhanCongViec.Text = "Có Mặt";
             this.btnPhanCongViec.Click += new System.EventHandler(this.btnPhanCongViec_Click);
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "stt";
-            this.dataGridViewTextBoxColumn12.FillWeight = 95.84665F;
-            this.dataGridViewTextBoxColumn12.HeaderText = "STT";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "tenCongTrinh";
-            this.dataGridViewTextBoxColumn13.FillWeight = 300.3085F;
-            this.dataGridViewTextBoxColumn13.HeaderText = "Tên Công Trình";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "tenCongViec";
-            this.dataGridViewTextBoxColumn14.FillWeight = 68.10609F;
-            this.dataGridViewTextBoxColumn14.HeaderText = "Tên Công Việc";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Width = 150;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "idPhanCong";
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "idChamCong";
-            this.Column6.HeaderText = "ID Chấm Công";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "ngayPhanCong";
-            this.Column4.HeaderText = "Ngày Phân Công";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "ngayBatDau";
-            this.Column2.FillWeight = 36.51944F;
-            this.Column2.HeaderText = "Ngày Bắt Đầu";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "ngayKetThuc";
-            this.Column3.FillWeight = 36.51944F;
-            this.Column3.HeaderText = "Ngày Kết Thúc";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "trangThaiChamCong";
-            this.Column5.HeaderText = "Trạng Thái";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             // 
             // Form_ChamCong
             // 

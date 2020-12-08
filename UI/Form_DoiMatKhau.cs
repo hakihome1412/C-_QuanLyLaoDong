@@ -66,5 +66,10 @@ namespace UI
                 }
             }
         }
+
+        private void Form_DoiMatKhau_Activated(object sender, EventArgs e)
+        {
+
+        }
     }
 }

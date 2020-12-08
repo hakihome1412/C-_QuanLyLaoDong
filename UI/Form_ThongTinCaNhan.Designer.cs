@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbPhongBan = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.tbChucVu = new DevExpress.XtraEditors.TextEdit();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,14 +46,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
-            this.tbPhongBan = new DevExpress.XtraEditors.TextEdit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPhongBan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbChucVu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDiaChi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenNV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbMaNV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPhongBan.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -87,6 +87,18 @@
             this.panel1.Size = new System.Drawing.Size(955, 345);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // tbPhongBan
+            // 
+            this.tbPhongBan.Enabled = false;
+            this.tbPhongBan.Location = new System.Drawing.Point(157, 256);
+            this.tbPhongBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPhongBan.Name = "tbPhongBan";
+            this.tbPhongBan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.tbPhongBan.Properties.Appearance.Options.UseFont = true;
+            this.tbPhongBan.Size = new System.Drawing.Size(381, 26);
+            this.tbPhongBan.TabIndex = 32;
+            this.tbPhongBan.EditValueChanged += new System.EventHandler(this.textEdit3_EditValueChanged);
             // 
             // label6
             // 
@@ -232,18 +244,6 @@
             // 
             this.defaultLookAndFeel1.LookAndFeel.SkinName = "Blue";
             // 
-            // tbPhongBan
-            // 
-            this.tbPhongBan.Enabled = false;
-            this.tbPhongBan.Location = new System.Drawing.Point(157, 256);
-            this.tbPhongBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbPhongBan.Name = "tbPhongBan";
-            this.tbPhongBan.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.tbPhongBan.Properties.Appearance.Options.UseFont = true;
-            this.tbPhongBan.Size = new System.Drawing.Size(381, 26);
-            this.tbPhongBan.TabIndex = 32;
-            this.tbPhongBan.EditValueChanged += new System.EventHandler(this.textEdit3_EditValueChanged);
-            // 
             // Form_ThongTinCaNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,16 +253,17 @@
             this.Controls.Add(this.panel1);
             this.Name = "Form_ThongTinCaNhan";
             this.Text = "Thông Tin Cá Nhân";
+            this.Activated += new System.EventHandler(this.Form_ThongTinCaNhan_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_ThongTinCaNhan_FormClosed);
             this.Load += new System.EventHandler(this.Form_ThongTinCaNhan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbPhongBan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbChucVu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDiaChi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenNV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbMaNV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbPhongBan.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

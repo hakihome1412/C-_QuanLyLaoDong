@@ -27,13 +27,23 @@ namespace UI
         public static bool f_PhanCong = true;
         public static bool f_QLNhanVien = true;
         public static bool f_ChamCong = true;
+        public static bool f_BC_TatCaCongTrinh = true;
+        public static bool f_BC_CongTrinhQuaHan = true;
+        public static bool f_BC_CongTrinhDangThucHien = true;
+        public static bool f_BC_CongTrinhDaHoanThanh = true;
+        public static bool f_BC_TatCaNhanVien = true;
 
         NhanVienBLL nvBLL;
+        PhongBanBLL pbBLL;
+
+        ePhongBan aa;
+        List<eNhanVien> data;
 
         public Form_Main()
         {
             InitializeComponent();
             nvBLL = new NhanVienBLL();
+            pbBLL = new PhongBanBLL();
         }
 
         private void Form_Main_Load(object sender, EventArgs e)
@@ -41,6 +51,9 @@ namespace UI
             int kq = nvBLL.checkChucVuCongViec(idNhanVienDangNhap);
             eNhanVien nv = nvBLL.getNhanVienById(idNhanVienDangNhap);
             idPhongBan = nv.idPhongBan;
+            data = nvBLL.getNhanVienByIdPhongBan(idPhongBan);
+            //MessageBox.Show(data.Count.ToString());
+            aa = pbBLL.getPhongBanById(idPhongBan);
 
             if (kq == 1)
             {
@@ -232,6 +245,117 @@ namespace UI
                 foreach (XtraForm item in this.MdiChildren)
                 {
                     if (item is Form_ChamCong)
+                    {
+                        item.Activate();
+                    }
+                }
+            }
+        }
+
+        private void btn_BC_TatCa_CongTrinh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form_BC_TatCaCongTrinh form = new Form_BC_TatCaCongTrinh();
+
+            if (f_BC_TatCaCongTrinh == true)
+            {
+                form.MdiParent = this;
+                form.Show();
+                f_BC_TatCaCongTrinh = false;
+            }
+            else
+            {
+                foreach (XtraForm item in this.MdiChildren)
+                {
+                    if (item is Form_BC_TatCaCongTrinh)
+                    {
+                        item.Activate();
+                    }
+                }
+            }
+        }
+
+        private void btn_BC_CT_MuonQuaHan_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form_BC_CongTrinhQuaHan form = new Form_BC_CongTrinhQuaHan();
+
+            if (f_BC_CongTrinhQuaHan == true)
+            {
+                form.MdiParent = this;
+                form.Show();
+                f_BC_CongTrinhQuaHan = false;
+            }
+            else
+            {
+                foreach (XtraForm item in this.MdiChildren)
+                {
+                    if (item is Form_BC_CongTrinhQuaHan)
+                    {
+                        item.Activate();
+                    }
+                }
+            }
+        }
+
+        private void btn_BC_CongTrinhDangThucHien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form_BC_CongTrinhDangThucHien form = new Form_BC_CongTrinhDangThucHien();
+
+            if (f_BC_CongTrinhDangThucHien == true)
+            {
+                form.MdiParent = this;
+                form.Show();
+                f_BC_CongTrinhDangThucHien = false;
+            }
+            else
+            {
+                foreach (XtraForm item in this.MdiChildren)
+                {
+                    if (item is Form_BC_CongTrinhDangThucHien)
+                    {
+                        item.Activate();
+                    }
+                }
+            }
+        }
+
+        private void btn_BC_CongTrinhDaHoanThanh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form_BC_CongTrinhDaHoanThanh form = new Form_BC_CongTrinhDaHoanThanh();
+
+            if (f_BC_CongTrinhDaHoanThanh == true)
+            {
+                form.MdiParent = this;
+                form.Show();
+                f_BC_CongTrinhDaHoanThanh = false;
+            }
+            else
+            {
+                foreach (XtraForm item in this.MdiChildren)
+                {
+                    if (item is Form_BC_CongTrinhDaHoanThanh)
+                    {
+                        item.Activate();
+                    }
+                }
+            }
+        }
+
+        private void btn_BC_TatCaNhanVien_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form_BC_TatCaNhanVien form = new Form_BC_TatCaNhanVien();
+
+            if (f_BC_TatCaNhanVien == true)
+            {
+                form.MdiParent = this;
+                form.PrintNhanVien(aa.tenPhongBan, data);
+                form.Show();
+                f_BC_TatCaNhanVien = false;
+            }
+            else
+            {
+                foreach (XtraForm item in this.MdiChildren)
+                {
+                    if (item is Form_BC_TatCaNhanVien)
                     {
                         item.Activate();
                     }

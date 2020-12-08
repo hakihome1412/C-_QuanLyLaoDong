@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BLL;
 using Entities;
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -67,7 +68,9 @@ namespace UI
             btnXoa.Enabled = btnCapNhat.Enabled = btnThem.Enabled = true;
             enableOptions(false);
             btnLuu.Enabled = false;
-        }
+            trangThaiLuu = -1;
+            btnThem.Text = "Thêm Mới";
+    }
 
         private void clearAll()
         {
@@ -143,50 +146,87 @@ namespace UI
         {
             if (trangThaiLuu == 0) // Thêm
             {
-                eNhanVien a = new eNhanVien(tbTenNhanVien.Text, tbDiaChi.Text, tbSdt.Text, Form_Main.idPhongBan);
-                bool kq = nvBLL.themNhanVien(a);
-
-                if (kq)
+                if(tbTenNhanVien.Text.Trim().Length == 0 || tbDiaChi.Text.Trim().Length == 0 || tbSdt.Text.Trim().Length == 0)
                 {
-                    XtraMessageBox.Show("Thêm nhân viên thành công");
-
+                    XtraMessageBox.Show("Vui lòng nhập đầy đủ dữ liệu cho nhân viên mới!");
                 }
                 else
                 {
-                    XtraMessageBox.Show("Thêm nhân viên thất bại !!!");
-                }
+                    if(!Regex.IsMatch(tbSdt.Text, "0([1-9]){9}"))
+                    {
+                        XtraMessageBox.Show("Số điện thoại không hợp lệ!");
+                    }
+                    else
+                    {
+                        eNhanVien a = new eNhanVien(tbTenNhanVien.Text, tbDiaChi.Text, tbSdt.Text, Form_Main.idPhongBan);
+                        bool kq = nvBLL.themNhanVien(a);
 
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = nvBLL.getNhanVienByIdPhongBan(Form_Main.idPhongBan);
-                loadDataCellNhanVien();
-                btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
-                btnLuu.Enabled = false;
-                enableOptions(false);
-                trangThaiLuu = -1;
-                btnThem.Text = "Thêm mới";
+                        if (kq)
+                        {
+                            XtraMessageBox.Show("Thêm nhân viên thành công");
+
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Thêm nhân viên thất bại !!!");
+                        }
+
+
+
+
+
+                        dataGridView1.DataSource = null;
+                        dataGridView1.DataSource = nvBLL.getNhanVienByIdPhongBan(Form_Main.idPhongBan);
+                        loadDataCellNhanVien();
+                        btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
+                        btnLuu.Enabled = false;
+                        enableOptions(false);
+                        trangThaiLuu = -1;
+                        btnThem.Text = "Thêm mới";
+                    }
+                }
             }
             else //Cập nhật
             {
-                eNhanVien a = new eNhanVien(dataGridView1.CurrentRow.Cells[0].Value.ToString(), tbTenNhanVien.Text, tbDiaChi.Text, tbSdt.Text, true);
-                bool kq = nvBLL.capNhatNhanVien(a);
-
-                if (kq)
+                if (tbTenNhanVien.Text.Trim().Length == 0 || tbDiaChi.Text.Trim().Length == 0 || tbSdt.Text.Trim().Length == 0)
                 {
-                    XtraMessageBox.Show("Cập nhật thông tin nhân viên thành công");
-
+                    XtraMessageBox.Show("Vui lòng nhập đầy đủ dữ liệu cho nhân viên mới!");
                 }
                 else
                 {
-                    XtraMessageBox.Show("Cập nhật thông tin nhân viên thất bại !!!");
-                }
+                    if (!Regex.IsMatch(tbSdt.Text, "0([1-9]){9}"))
+                    {
+                        XtraMessageBox.Show("Số điện thoại không hợp lệ!");
+                    }
+                    else
+                    {
+                        eNhanVien a = new eNhanVien(dataGridView1.CurrentRow.Cells[0].Value.ToString(), tbTenNhanVien.Text, tbDiaChi.Text, tbSdt.Text, true);
+                        bool kq = nvBLL.capNhatNhanVien(a);
 
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = nvBLL.getNhanVienByIdPhongBan(Form_Main.idPhongBan);
-                loadDataCellNhanVien();
-                btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
-                btnLuu.Enabled = false;
-                enableOptions(false);
+                        if (kq)
+                        {
+                            XtraMessageBox.Show("Cập nhật thông tin nhân viên thành công");
+
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Cập nhật thông tin nhân viên thất bại !!!");
+                        }
+
+                        dataGridView1.DataSource = null;
+                        dataGridView1.DataSource = nvBLL.getNhanVienByIdPhongBan(Form_Main.idPhongBan);
+                        loadDataCellNhanVien();
+                        btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
+                        btnLuu.Enabled = false;
+                        enableOptions(false);
+                    }
+                }              
             }
+        }
+
+        private void Form_QLNhanVien_Activated(object sender, EventArgs e)
+        {
+            loadDataCellNhanVien();
         }
     }
 }

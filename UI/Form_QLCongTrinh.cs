@@ -94,49 +94,79 @@ namespace UI
         {
             if(trangThaiLuu == 0) // Thêm
             {
-                eCongTrinh a = new eCongTrinh(tbTenCongTrinh.Text, tbDiaChi.Text, (DateTime)dateNgayBatDau.Value, (DateTime)dateNgayKetThuc.Value);
-                bool kq = ctBLL.themCongTrinh(a);
-
-                if (kq)
+                if(tbTenCongTrinh.Text.Trim().Length == 0 || tbDiaChi.Text.Trim().Length == 0)
                 {
-                    XtraMessageBox.Show("Thêm công trình thành công");
-
+                    XtraMessageBox.Show("Vui lòng nhập đầy đủ dữ liệu cho công trình mới!");
                 }
                 else
                 {
-                    XtraMessageBox.Show("Thêm công trình thất bại !!!");
-                }
+                    if (dateNgayBatDau.Value > dateNgayKetThuc.Value)
+                    {
+                        XtraMessageBox.Show("Ngày bắt đầu phải nhỏ hơn hoặc bằng ngày kết thúc công trình!");
+                    }
+                    else
+                    {
+                        eCongTrinh a = new eCongTrinh(tbTenCongTrinh.Text, tbDiaChi.Text, (DateTime)dateNgayBatDau.Value, (DateTime)dateNgayKetThuc.Value);
+                        bool kq = ctBLL.themCongTrinh(a);
 
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = ctBLL.getAllCongTrinh();
-                loadDataCellCongTrinh();
-                btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
-                btnLuu.Enabled = false;
-                enableOptions(false);
-                trangThaiLuu = -1;
-                btnThem.Text = "Thêm mới";
+                        if (kq)
+                        {
+                            XtraMessageBox.Show("Thêm công trình thành công");
+
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Thêm công trình thất bại !!!");
+                        }
+
+                        dataGridView1.DataSource = null;
+                        dataGridView1.DataSource = ctBLL.getAllCongTrinh();
+                        loadDataCellCongTrinh();
+                        btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
+                        btnLuu.Enabled = false;
+                        enableOptions(false);
+                        trangThaiLuu = -1;
+                        btnThem.Text = "Thêm Mới";
+                    }                  
+                }
+              
             }
             else //Cập nhật
             {
-                eCongTrinh a = new eCongTrinh(dataGridView1.CurrentRow.Cells[0].Value.ToString(), tbTenCongTrinh.Text, tbDiaChi.Text, (DateTime)dateNgayBatDau.Value, (DateTime)dateNgayKetThuc.Value, (DateTime)dateNgayHoanThanh.Value, comboBoxTrangThai.Text);
-                bool kq = ctBLL.capNhatCongTrinh(a);
-
-                if (kq)
+                if (tbTenCongTrinh.Text.Trim().Length == 0 || tbDiaChi.Text.Trim().Length == 0)
                 {
-                    XtraMessageBox.Show("Cập nhật công trình thành công");
-
+                    XtraMessageBox.Show("Vui lòng nhập đầy đủ dữ liệu cho công trình!");
                 }
                 else
                 {
-                    XtraMessageBox.Show("Cập nhật công trình thất bại !!!");
-                }
+                    if (dateNgayBatDau.Value > dateNgayKetThuc.Value)
+                    {
+                        XtraMessageBox.Show("Ngày bắt đầu phải nhỏ hơn hoặc bằng ngày kết thúc công trình!");
+                    }
+                    else
+                    {
+                        eCongTrinh a = new eCongTrinh(dataGridView1.CurrentRow.Cells[0].Value.ToString(), tbTenCongTrinh.Text, tbDiaChi.Text, (DateTime)dateNgayBatDau.Value, (DateTime)dateNgayKetThuc.Value, (DateTime)dateNgayHoanThanh.Value, comboBoxTrangThai.Text);
+                        bool kq = ctBLL.capNhatCongTrinh(a);
 
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = ctBLL.getAllCongTrinh();
-                loadDataCellCongTrinh();
-                btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
-                btnLuu.Enabled = false;
-                enableOptions(false);
+                        if (kq)
+                        {
+                            XtraMessageBox.Show("Cập nhật công trình thành công");
+
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Cập nhật công trình thất bại !!!");
+                        }
+
+                        dataGridView1.DataSource = null;
+                        dataGridView1.DataSource = ctBLL.getAllCongTrinh();
+                        loadDataCellCongTrinh();
+                        btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
+                        btnLuu.Enabled = false;
+                        enableOptions(false);
+                    }
+                }
+               
             }
         }
 
@@ -203,6 +233,8 @@ namespace UI
             btnXoa.Enabled = btnCapNhat.Enabled = btnThem.Enabled = true;
             enableOptions(false);
             btnLuu.Enabled = false;
+            btnThem.Text = "Thêm mới";
+            trangThaiLuu = -1;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -233,6 +265,11 @@ namespace UI
                 dialog = DialogResult.Cancel;
                
             }
+        }
+
+        private void Form_QLCongTrinh_Activated(object sender, EventArgs e)
+        {
+            loadDataCellCongTrinh();
         }
     }
 }

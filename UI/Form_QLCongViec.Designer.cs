@@ -455,6 +455,7 @@
             this.Controls.Add(this.groupControl2);
             this.Name = "Form_QLCongViec";
             this.Text = "Quản Lý Công Việc";
+            this.Activated += new System.EventHandler(this.Form_QLCongViec_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_QLCongViec_FormClosed);
             this.Load += new System.EventHandler(this.Form_QLCongViec_Load);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
