@@ -22,3 +22,15 @@ D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\BLL\obj\Debug\BLL.csproj.Core
 D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\BLL\obj\Debug\BLL.dll
 D:\C-_QuanLyLaoDong-master\C-_QuanLyLaoDong-master\BLL\obj\Debug\BLL.pdb
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\bin\Debug\BLL.dll
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\bin\Debug\BLL.pdb
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\bin\Debug\DAL.dll
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\bin\Debug\Entities.dll
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\bin\Debug\DAL.pdb
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\bin\Debug\DAL.dll.config
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\bin\Debug\Entities.pdb
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\obj\Debug\BLL.dll
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\BLL\obj\Debug\BLL.pdb

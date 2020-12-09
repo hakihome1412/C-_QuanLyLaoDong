@@ -107,10 +107,10 @@
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl2.Controls.Add(this.btnXoaPhanCongCongViec);
             this.groupControl2.Controls.Add(this.btnPhanCongViec);
-            this.groupControl2.Location = new System.Drawing.Point(3, 230);
+            this.groupControl2.Location = new System.Drawing.Point(3, 569);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(268, 211);
+            this.groupControl2.Size = new System.Drawing.Size(354, 326);
             this.groupControl2.TabIndex = 66;
             this.groupControl2.Text = "Thao Tác";
             // 
@@ -118,10 +118,10 @@
             // 
             this.btnXoaPhanCongCongViec.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnXoaPhanCongCongViec.Appearance.Options.UseFont = true;
-            this.btnXoaPhanCongCongViec.Location = new System.Drawing.Point(19, 133);
+            this.btnXoaPhanCongCongViec.Location = new System.Drawing.Point(22, 187);
             this.btnXoaPhanCongCongViec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoaPhanCongCongViec.Name = "btnXoaPhanCongCongViec";
-            this.btnXoaPhanCongCongViec.Size = new System.Drawing.Size(231, 70);
+            this.btnXoaPhanCongCongViec.Size = new System.Drawing.Size(311, 124);
             this.btnXoaPhanCongCongViec.TabIndex = 9;
             this.btnXoaPhanCongCongViec.Text = "Xóa Phân Công Công Việc";
             this.btnXoaPhanCongCongViec.Click += new System.EventHandler(this.btnXoaPhanCongCongViec_Click);
@@ -130,10 +130,10 @@
             // 
             this.btnPhanCongViec.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnPhanCongViec.Appearance.Options.UseFont = true;
-            this.btnPhanCongViec.Location = new System.Drawing.Point(19, 24);
+            this.btnPhanCongViec.Location = new System.Drawing.Point(22, 36);
             this.btnPhanCongViec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPhanCongViec.Name = "btnPhanCongViec";
-            this.btnPhanCongViec.Size = new System.Drawing.Size(231, 70);
+            this.btnPhanCongViec.Size = new System.Drawing.Size(311, 123);
             this.btnPhanCongViec.TabIndex = 8;
             this.btnPhanCongViec.Text = "Phân Công Việc";
             this.btnPhanCongViec.Click += new System.EventHandler(this.btnPhanCongViec_Click);
@@ -148,7 +148,7 @@
             this.dataGridView_DanhSachCongViecCuaCongTrinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.dataGridView_DanhSachCongViecCuaCongTrinh.Location = new System.Drawing.Point(5, 96);
+            this.dataGridView_DanhSachCongViecCuaCongTrinh.Location = new System.Drawing.Point(5, 78);
             this.dataGridView_DanhSachCongViecCuaCongTrinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView_DanhSachCongViecCuaCongTrinh.MultiSelect = false;
             this.dataGridView_DanhSachCongViecCuaCongTrinh.Name = "dataGridView_DanhSachCongViecCuaCongTrinh";
@@ -156,7 +156,7 @@
             this.dataGridView_DanhSachCongViecCuaCongTrinh.RowHeadersVisible = false;
             this.dataGridView_DanhSachCongViecCuaCongTrinh.RowTemplate.Height = 24;
             this.dataGridView_DanhSachCongViecCuaCongTrinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_DanhSachCongViecCuaCongTrinh.Size = new System.Drawing.Size(452, 146);
+            this.dataGridView_DanhSachCongViecCuaCongTrinh.Size = new System.Drawing.Size(822, 412);
             this.dataGridView_DanhSachCongViecCuaCongTrinh.TabIndex = 56;
             // 
             // dataGridViewTextBoxColumn1
@@ -187,10 +187,10 @@
             this.groupControl4.Controls.Add(this.dateNgayBatDau);
             this.groupControl4.Controls.Add(this.label5);
             this.groupControl4.Controls.Add(this.dataGridView_DanhSachCongViecCuaCongTrinh);
-            this.groupControl4.Location = new System.Drawing.Point(697, 191);
+            this.groupControl4.Location = new System.Drawing.Point(955, 402);
             this.groupControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(462, 250);
+            this.groupControl4.Size = new System.Drawing.Size(832, 497);
             this.groupControl4.TabIndex = 68;
             this.groupControl4.Text = "Danh Sách Công Việc Của Công Trình";
             // 
@@ -198,7 +198,7 @@
             // 
             this.dateNgayKetThuc.CustomFormat = "dd/MM/yyyy";
             this.dateNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayKetThuc.Location = new System.Drawing.Point(128, 61);
+            this.dateNgayKetThuc.Location = new System.Drawing.Point(532, 40);
             this.dateNgayKetThuc.Name = "dateNgayKetThuc";
             this.dateNgayKetThuc.Size = new System.Drawing.Size(243, 21);
             this.dateNgayKetThuc.TabIndex = 1020;
@@ -207,7 +207,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label6.Location = new System.Drawing.Point(18, 65);
+            this.label6.Location = new System.Drawing.Point(422, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 17);
             this.label6.TabIndex = 1019;
@@ -217,7 +217,7 @@
             // 
             this.dateNgayBatDau.CustomFormat = "dd/MM/yyyy";
             this.dateNgayBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayBatDau.Location = new System.Drawing.Point(128, 23);
+            this.dateNgayBatDau.Location = new System.Drawing.Point(119, 40);
             this.dateNgayBatDau.Name = "dateNgayBatDau";
             this.dateNgayBatDau.Size = new System.Drawing.Size(243, 21);
             this.dateNgayBatDau.TabIndex = 1018;
@@ -226,7 +226,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label5.Location = new System.Drawing.Point(24, 27);
+            this.label5.Location = new System.Drawing.Point(15, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 17);
             this.label5.TabIndex = 62;
@@ -255,7 +255,7 @@
             this.dataGridView_DanhSachCongTrinh.RowHeadersVisible = false;
             this.dataGridView_DanhSachCongTrinh.RowTemplate.Height = 24;
             this.dataGridView_DanhSachCongTrinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_DanhSachCongTrinh.Size = new System.Drawing.Size(452, 150);
+            this.dataGridView_DanhSachCongTrinh.Size = new System.Drawing.Size(822, 361);
             this.dataGridView_DanhSachCongTrinh.TabIndex = 56;
             this.dataGridView_DanhSachCongTrinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_DanhSachCongTrinh_CellClick);
             // 
@@ -324,10 +324,10 @@
             this.groupControl3.Appearance.Options.UseBackColor = true;
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl3.Controls.Add(this.dataGridView_DanhSachCongTrinh);
-            this.groupControl3.Location = new System.Drawing.Point(697, 11);
+            this.groupControl3.Location = new System.Drawing.Point(955, 11);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(462, 176);
+            this.groupControl3.Size = new System.Drawing.Size(832, 387);
             this.groupControl3.TabIndex = 67;
             this.groupControl3.Text = "Danh Sách Công Trình";
             // 
@@ -339,10 +339,10 @@
             this.groupControl6.Controls.Add(this.label1);
             this.groupControl6.Controls.Add(this.tbTimKiemNhanVien);
             this.groupControl6.Controls.Add(this.dataGridView_NhanVienTrongPhongBan);
-            this.groupControl6.Location = new System.Drawing.Point(277, 11);
+            this.groupControl6.Location = new System.Drawing.Point(363, 11);
             this.groupControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(414, 215);
+            this.groupControl6.Size = new System.Drawing.Size(581, 387);
             this.groupControl6.TabIndex = 70;
             this.groupControl6.Text = "Danh Sách Nhân Viên Trong Phòng Ban";
             // 
@@ -362,7 +362,7 @@
             this.tbTimKiemNhanVien.Name = "tbTimKiemNhanVien";
             this.tbTimKiemNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
             this.tbTimKiemNhanVien.Properties.Appearance.Options.UseFont = true;
-            this.tbTimKiemNhanVien.Size = new System.Drawing.Size(285, 30);
+            this.tbTimKiemNhanVien.Size = new System.Drawing.Size(449, 30);
             this.tbTimKiemNhanVien.TabIndex = 57;
             this.tbTimKiemNhanVien.TextChanged += new System.EventHandler(this.tbTimKiemNhanVien_TextChanged);
             this.tbTimKiemNhanVien.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbTimKiemNhanVien_KeyDown);
@@ -386,7 +386,7 @@
             this.dataGridView_NhanVienTrongPhongBan.RowHeadersVisible = false;
             this.dataGridView_NhanVienTrongPhongBan.RowTemplate.Height = 24;
             this.dataGridView_NhanVienTrongPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_NhanVienTrongPhongBan.Size = new System.Drawing.Size(404, 149);
+            this.dataGridView_NhanVienTrongPhongBan.Size = new System.Drawing.Size(568, 323);
             this.dataGridView_NhanVienTrongPhongBan.TabIndex = 56;
             this.dataGridView_NhanVienTrongPhongBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_NhanVienTrongPhongBan_CellClick);
             this.dataGridView_NhanVienTrongPhongBan.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.dataGridView_NhanVienTrongPhongBan_RowStateChanged);
@@ -424,10 +424,10 @@
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl1.Controls.Add(this.dataGridView_CongViecCuaNhanVien);
-            this.groupControl1.Location = new System.Drawing.Point(277, 230);
+            this.groupControl1.Location = new System.Drawing.Point(363, 402);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(414, 211);
+            this.groupControl1.Size = new System.Drawing.Size(581, 497);
             this.groupControl1.TabIndex = 71;
             this.groupControl1.Text = " Danh Sách Công Việc Của Nhân Viên";
             // 
@@ -445,7 +445,7 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView_CongViecCuaNhanVien.Location = new System.Drawing.Point(5, 22);
+            this.dataGridView_CongViecCuaNhanVien.Location = new System.Drawing.Point(5, 25);
             this.dataGridView_CongViecCuaNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView_CongViecCuaNhanVien.MultiSelect = false;
             this.dataGridView_CongViecCuaNhanVien.Name = "dataGridView_CongViecCuaNhanVien";
@@ -453,7 +453,7 @@
             this.dataGridView_CongViecCuaNhanVien.RowHeadersVisible = false;
             this.dataGridView_CongViecCuaNhanVien.RowTemplate.Height = 24;
             this.dataGridView_CongViecCuaNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_CongViecCuaNhanVien.Size = new System.Drawing.Size(404, 181);
+            this.dataGridView_CongViecCuaNhanVien.Size = new System.Drawing.Size(568, 468);
             this.dataGridView_CongViecCuaNhanVien.TabIndex = 56;
             // 
             // dataGridViewTextBoxColumn12
@@ -521,7 +521,7 @@
             this.groupControl5.Location = new System.Drawing.Point(3, 11);
             this.groupControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(268, 215);
+            this.groupControl5.Size = new System.Drawing.Size(354, 215);
             this.groupControl5.TabIndex = 72;
             this.groupControl5.Text = "Thông Tin Nhân Viên";
             // 
@@ -529,7 +529,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label4.Location = new System.Drawing.Point(19, 148);
+            this.label4.Location = new System.Drawing.Point(9, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 17);
             this.label4.TabIndex = 64;
@@ -538,18 +538,18 @@
             // tbSoCongViec
             // 
             this.tbSoCongViec.Enabled = false;
-            this.tbSoCongViec.Location = new System.Drawing.Point(19, 168);
+            this.tbSoCongViec.Location = new System.Drawing.Point(9, 168);
             this.tbSoCongViec.Name = "tbSoCongViec";
             this.tbSoCongViec.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
             this.tbSoCongViec.Properties.Appearance.Options.UseFont = true;
-            this.tbSoCongViec.Size = new System.Drawing.Size(231, 30);
+            this.tbSoCongViec.Size = new System.Drawing.Size(340, 30);
             this.tbSoCongViec.TabIndex = 63;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label3.Location = new System.Drawing.Point(19, 90);
+            this.label3.Location = new System.Drawing.Point(9, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 17);
             this.label3.TabIndex = 62;
@@ -558,18 +558,18 @@
             // tbTenNhanVien
             // 
             this.tbTenNhanVien.Enabled = false;
-            this.tbTenNhanVien.Location = new System.Drawing.Point(19, 110);
+            this.tbTenNhanVien.Location = new System.Drawing.Point(9, 110);
             this.tbTenNhanVien.Name = "tbTenNhanVien";
             this.tbTenNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
             this.tbTenNhanVien.Properties.Appearance.Options.UseFont = true;
-            this.tbTenNhanVien.Size = new System.Drawing.Size(231, 30);
+            this.tbTenNhanVien.Size = new System.Drawing.Size(340, 30);
             this.tbTenNhanVien.TabIndex = 61;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label2.Location = new System.Drawing.Point(19, 36);
+            this.label2.Location = new System.Drawing.Point(9, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 17);
             this.label2.TabIndex = 60;
@@ -579,18 +579,18 @@
             // tbMaNhanVien
             // 
             this.tbMaNhanVien.Enabled = false;
-            this.tbMaNhanVien.Location = new System.Drawing.Point(19, 57);
+            this.tbMaNhanVien.Location = new System.Drawing.Point(9, 57);
             this.tbMaNhanVien.Name = "tbMaNhanVien";
             this.tbMaNhanVien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
             this.tbMaNhanVien.Properties.Appearance.Options.UseFont = true;
-            this.tbMaNhanVien.Size = new System.Drawing.Size(231, 30);
+            this.tbMaNhanVien.Size = new System.Drawing.Size(340, 30);
             this.tbMaNhanVien.TabIndex = 59;
             // 
             // Form_PhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 444);
+            this.ClientSize = new System.Drawing.Size(1799, 903);
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl6);
@@ -657,7 +657,6 @@
         private DevExpress.XtraEditors.TextEdit tbTimKiemNhanVien;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton btnXoaPhanCongCongViec;
-        private DevExpress.XtraEditors.SimpleButton btnPhanCongViec;
         private DevExpress.XtraEditors.GroupControl groupControl5;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.TextEdit tbTenNhanVien;
@@ -675,5 +674,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private DevExpress.XtraEditors.SimpleButton btnPhanCongViec;
     }
 }

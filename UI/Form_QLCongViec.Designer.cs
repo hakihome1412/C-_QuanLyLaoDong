@@ -56,11 +56,9 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelQuanLyDM = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.tbTenCongViec = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
@@ -74,10 +72,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panelQuanLyDM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTenCongViec.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTenCongViec.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tenCongTrinh
@@ -128,10 +125,10 @@
             this.groupControl4.Appearance.Options.UseBackColor = true;
             this.groupControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl4.Controls.Add(this.dataGridView2);
-            this.groupControl4.Location = new System.Drawing.Point(540, 230);
+            this.groupControl4.Location = new System.Drawing.Point(645, 492);
             this.groupControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(619, 203);
+            this.groupControl4.Size = new System.Drawing.Size(1142, 406);
             this.groupControl4.TabIndex = 63;
             this.groupControl4.Text = "Danh Sách Công Việc Của Công Trình";
             // 
@@ -153,7 +150,7 @@
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(609, 179);
+            this.dataGridView2.Size = new System.Drawing.Size(1127, 376);
             this.dataGridView2.TabIndex = 56;
             // 
             // dataGridViewTextBoxColumn1
@@ -180,10 +177,10 @@
             this.groupControl3.Appearance.Options.UseBackColor = true;
             this.groupControl3.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl3.Controls.Add(this.dataGridView1);
-            this.groupControl3.Location = new System.Drawing.Point(540, 11);
+            this.groupControl3.Location = new System.Drawing.Point(645, 11);
             this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(619, 215);
+            this.groupControl3.Size = new System.Drawing.Size(1142, 463);
             this.groupControl3.TabIndex = 62;
             this.groupControl3.Text = "Danh Sách Công Trình";
             // 
@@ -210,7 +207,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(609, 187);
+            this.dataGridView1.Size = new System.Drawing.Size(1132, 437);
             this.dataGridView1.TabIndex = 56;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -237,10 +234,10 @@
             this.groupControl2.Appearance.Options.UseBackColor = true;
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl2.Controls.Add(this.panelThaoTac);
-            this.groupControl2.Location = new System.Drawing.Point(3, 277);
+            this.groupControl2.Location = new System.Drawing.Point(3, 492);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(531, 156);
+            this.groupControl2.Size = new System.Drawing.Size(636, 406);
             this.groupControl2.TabIndex = 61;
             this.groupControl2.Text = "Thao Tác";
             // 
@@ -255,17 +252,17 @@
             this.panelThaoTac.Location = new System.Drawing.Point(7, 23);
             this.panelThaoTac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelThaoTac.Name = "panelThaoTac";
-            this.panelThaoTac.Size = new System.Drawing.Size(519, 129);
+            this.panelThaoTac.Size = new System.Drawing.Size(624, 377);
             this.panelThaoTac.TabIndex = 3;
             // 
             // btnXoaCVCongTrinh
             // 
             this.btnXoaCVCongTrinh.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnXoaCVCongTrinh.Appearance.Options.UseFont = true;
-            this.btnXoaCVCongTrinh.Location = new System.Drawing.Point(366, 71);
+            this.btnXoaCVCongTrinh.Location = new System.Drawing.Point(429, 67);
             this.btnXoaCVCongTrinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoaCVCongTrinh.Name = "btnXoaCVCongTrinh";
-            this.btnXoaCVCongTrinh.Size = new System.Drawing.Size(141, 44);
+            this.btnXoaCVCongTrinh.Size = new System.Drawing.Size(141, 95);
             this.btnXoaCVCongTrinh.TabIndex = 9;
             this.btnXoaCVCongTrinh.Text = "Xóa Công Việc \r\nKhỏi Công Trình";
             this.btnXoaCVCongTrinh.Click += new System.EventHandler(this.btnXoaCVCongTrinh_Click);
@@ -274,10 +271,10 @@
             // 
             this.btnThemCVCongTrinh.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnThemCVCongTrinh.Appearance.Options.UseFont = true;
-            this.btnThemCVCongTrinh.Location = new System.Drawing.Point(366, 13);
+            this.btnThemCVCongTrinh.Location = new System.Drawing.Point(428, 209);
             this.btnThemCVCongTrinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemCVCongTrinh.Name = "btnThemCVCongTrinh";
-            this.btnThemCVCongTrinh.Size = new System.Drawing.Size(142, 44);
+            this.btnThemCVCongTrinh.Size = new System.Drawing.Size(142, 95);
             this.btnThemCVCongTrinh.TabIndex = 8;
             this.btnThemCVCongTrinh.Text = "Thêm Công Việc \r\nVào Công Trình";
             this.btnThemCVCongTrinh.Click += new System.EventHandler(this.btnThemCVCongTrinh_Click);
@@ -287,10 +284,10 @@
             this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnLuu.Appearance.Options.UseFont = true;
             this.btnLuu.Enabled = false;
-            this.btnLuu.Location = new System.Drawing.Point(203, 71);
+            this.btnLuu.Location = new System.Drawing.Point(234, 209);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(141, 44);
+            this.btnLuu.Size = new System.Drawing.Size(141, 95);
             this.btnLuu.TabIndex = 7;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -299,10 +296,10 @@
             // 
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.Location = new System.Drawing.Point(12, 71);
+            this.btnXoa.Location = new System.Drawing.Point(37, 209);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(145, 44);
+            this.btnXoa.Size = new System.Drawing.Size(145, 95);
             this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -311,10 +308,10 @@
             // 
             this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.Location = new System.Drawing.Point(12, 13);
+            this.btnThem.Location = new System.Drawing.Point(37, 67);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(145, 44);
+            this.btnThem.Size = new System.Drawing.Size(145, 95);
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm Mới";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -323,10 +320,10 @@
             // 
             this.btnCapNhat.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnCapNhat.Appearance.Options.UseFont = true;
-            this.btnCapNhat.Location = new System.Drawing.Point(203, 13);
+            this.btnCapNhat.Location = new System.Drawing.Point(234, 67);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(141, 44);
+            this.btnCapNhat.Size = new System.Drawing.Size(141, 95);
             this.btnCapNhat.TabIndex = 4;
             this.btnCapNhat.Text = "Cập Nhật";
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
@@ -344,7 +341,7 @@
             this.groupControl5.Location = new System.Drawing.Point(3, 104);
             this.groupControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(531, 169);
+            this.groupControl5.Size = new System.Drawing.Size(636, 370);
             this.groupControl5.TabIndex = 64;
             this.groupControl5.Text = "Danh Sách Tất Cả Công Việc";
             // 
@@ -366,7 +363,7 @@
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(521, 141);
+            this.dataGridView3.Size = new System.Drawing.Size(626, 344);
             this.dataGridView3.TabIndex = 57;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
@@ -387,67 +384,48 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // panelQuanLyDM
-            // 
-            this.panelQuanLyDM.Controls.Add(this.label6);
-            this.panelQuanLyDM.Controls.Add(this.tbTenCongViec);
-            this.panelQuanLyDM.Controls.Add(this.label1);
-            this.panelQuanLyDM.Location = new System.Drawing.Point(8, 23);
-            this.panelQuanLyDM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelQuanLyDM.Name = "panelQuanLyDM";
-            this.panelQuanLyDM.Size = new System.Drawing.Size(518, 49);
-            this.panelQuanLyDM.TabIndex = 53;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(30, 208);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(10, 13);
-            this.label6.TabIndex = 1012;
-            this.label6.Text = " ";
-            // 
-            // tbTenCongViec
-            // 
-            this.tbTenCongViec.Enabled = false;
-            this.tbTenCongViec.Location = new System.Drawing.Point(112, 13);
-            this.tbTenCongViec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbTenCongViec.Name = "tbTenCongViec";
-            this.tbTenCongViec.Size = new System.Drawing.Size(395, 20);
-            this.tbTenCongViec.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(18, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Tên Công việc:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // groupControl1
             // 
             this.groupControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
-            this.groupControl1.Controls.Add(this.panelQuanLyDM);
+            this.groupControl1.Controls.Add(this.tbTenCongViec);
+            this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Location = new System.Drawing.Point(3, 11);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(531, 89);
+            this.groupControl1.Size = new System.Drawing.Size(636, 89);
             this.groupControl1.TabIndex = 60;
             this.groupControl1.Text = "Thông Tin Công Việc";
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
+            // 
+            // tbTenCongViec
+            // 
+            this.tbTenCongViec.Enabled = false;
+            this.tbTenCongViec.Location = new System.Drawing.Point(129, 31);
+            this.tbTenCongViec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbTenCongViec.Name = "tbTenCongViec";
+            this.tbTenCongViec.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTenCongViec.Properties.Appearance.Options.UseFont = true;
+            this.tbTenCongViec.Size = new System.Drawing.Size(502, 26);
+            this.tbTenCongViec.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Tên Công việc:";
             // 
             // Form_QLCongViec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 444);
+            this.ClientSize = new System.Drawing.Size(1799, 903);
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.groupControl3);
@@ -471,11 +449,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panelQuanLyDM.ResumeLayout(false);
-            this.panelQuanLyDM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTenCongViec.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTenCongViec.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,22 +474,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idCongTrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
         private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DevExpress.XtraEditors.TextEdit tbTenCongViec;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelThaoTac;
+        private DevExpress.XtraEditors.SimpleButton btnXoaCVCongTrinh;
+        private DevExpress.XtraEditors.SimpleButton btnThemCVCongTrinh;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnThem;
         private DevExpress.XtraEditors.SimpleButton btnCapNhat;
-        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
-        private DevExpress.XtraEditors.SimpleButton btnXoaCVCongTrinh;
-        private DevExpress.XtraEditors.SimpleButton btnThemCVCongTrinh;
-        private DevExpress.XtraEditors.GroupControl groupControl5;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Panel panelQuanLyDM;
-        private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.TextEdit tbTenCongViec;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

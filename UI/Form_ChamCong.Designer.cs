@@ -69,7 +69,7 @@
             this.groupControl1.Location = new System.Drawing.Point(432, 11);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(718, 422);
+            this.groupControl1.Size = new System.Drawing.Size(1355, 881);
             this.groupControl1.TabIndex = 72;
             this.groupControl1.Text = " Danh Sách Công Việc Của Nhân Viên";
             // 
@@ -98,7 +98,7 @@
             this.dataGridView_CongViecCuaNhanVien.RowHeadersVisible = false;
             this.dataGridView_CongViecCuaNhanVien.RowTemplate.Height = 24;
             this.dataGridView_CongViecCuaNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_CongViecCuaNhanVien.Size = new System.Drawing.Size(708, 396);
+            this.dataGridView_CongViecCuaNhanVien.Size = new System.Drawing.Size(1345, 855);
             this.dataGridView_CongViecCuaNhanVien.TabIndex = 56;
             // 
             // dataGridViewTextBoxColumn12
@@ -187,7 +187,7 @@
             this.groupControl6.Location = new System.Drawing.Point(12, 11);
             this.groupControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(414, 278);
+            this.groupControl6.Size = new System.Drawing.Size(414, 585);
             this.groupControl6.TabIndex = 74;
             this.groupControl6.Text = "Danh Sách Nhân Viên Trong Phòng Ban";
             // 
@@ -230,7 +230,7 @@
             this.dataGridView_NhanVienTrongPhongBan.RowHeadersVisible = false;
             this.dataGridView_NhanVienTrongPhongBan.RowTemplate.Height = 24;
             this.dataGridView_NhanVienTrongPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_NhanVienTrongPhongBan.Size = new System.Drawing.Size(404, 214);
+            this.dataGridView_NhanVienTrongPhongBan.Size = new System.Drawing.Size(404, 521);
             this.dataGridView_NhanVienTrongPhongBan.TabIndex = 56;
             this.dataGridView_NhanVienTrongPhongBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_NhanVienTrongPhongBan_CellClick);
             // 
@@ -267,10 +267,10 @@
             this.groupControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
             this.groupControl2.Controls.Add(this.btnXoaPhanCongCongViec);
             this.groupControl2.Controls.Add(this.btnPhanCongViec);
-            this.groupControl2.Location = new System.Drawing.Point(12, 293);
+            this.groupControl2.Location = new System.Drawing.Point(12, 600);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(414, 140);
+            this.groupControl2.Size = new System.Drawing.Size(414, 292);
             this.groupControl2.TabIndex = 75;
             this.groupControl2.Text = "Thao Tác";
             // 
@@ -278,10 +278,10 @@
             // 
             this.btnXoaPhanCongCongViec.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnXoaPhanCongCongViec.Appearance.Options.UseFont = true;
-            this.btnXoaPhanCongCongViec.Location = new System.Drawing.Point(239, 50);
+            this.btnXoaPhanCongCongViec.Location = new System.Drawing.Point(88, 167);
             this.btnXoaPhanCongCongViec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoaPhanCongCongViec.Name = "btnXoaPhanCongCongViec";
-            this.btnXoaPhanCongCongViec.Size = new System.Drawing.Size(151, 70);
+            this.btnXoaPhanCongCongViec.Size = new System.Drawing.Size(217, 106);
             this.btnXoaPhanCongCongViec.TabIndex = 9;
             this.btnXoaPhanCongCongViec.Text = "Vắng";
             this.btnXoaPhanCongCongViec.Click += new System.EventHandler(this.btnXoaPhanCongCongViec_Click);
@@ -290,10 +290,10 @@
             // 
             this.btnPhanCongViec.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnPhanCongViec.Appearance.Options.UseFont = true;
-            this.btnPhanCongViec.Location = new System.Drawing.Point(24, 50);
+            this.btnPhanCongViec.Location = new System.Drawing.Point(88, 22);
             this.btnPhanCongViec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPhanCongViec.Name = "btnPhanCongViec";
-            this.btnPhanCongViec.Size = new System.Drawing.Size(151, 70);
+            this.btnPhanCongViec.Size = new System.Drawing.Size(217, 106);
             this.btnPhanCongViec.TabIndex = 8;
             this.btnPhanCongViec.Text = "Có Mặt";
             this.btnPhanCongViec.Click += new System.EventHandler(this.btnPhanCongViec_Click);
@@ -302,12 +302,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 444);
+            this.ClientSize = new System.Drawing.Size(1799, 903);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl6);
             this.Controls.Add(this.groupControl1);
             this.Name = "Form_ChamCong";
             this.Text = "Chấm Công";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Form_ChamCong_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_ChamCong_FormClosed);
             this.Load += new System.EventHandler(this.Form_ChamCong_Load);

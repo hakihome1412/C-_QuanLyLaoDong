@@ -53,7 +53,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.tbMatKhauMoi);
             this.panel1.Controls.Add(this.tbNhapLaiMK);
-            this.panel1.Location = new System.Drawing.Point(280, 42);
+            this.panel1.Location = new System.Drawing.Point(598, 227);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(603, 361);
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 444);
+            this.ClientSize = new System.Drawing.Size(1799, 903);
             this.Controls.Add(this.panel1);
             this.Name = "Form_DoiMatKhau";
             this.Text = "Đổi Mật Khẩu";

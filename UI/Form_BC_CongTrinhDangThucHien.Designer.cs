@@ -271,7 +271,7 @@
             this.documentViewer1.IsMetric = false;
             this.documentViewer1.Location = new System.Drawing.Point(0, 0);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(1165, 632);
+            this.documentViewer1.Size = new System.Drawing.Size(1799, 903);
             this.documentViewer1.TabIndex = 0;
             // 
             // documentViewer2
@@ -281,7 +281,7 @@
             this.documentViewer2.IsMetric = false;
             this.documentViewer2.Location = new System.Drawing.Point(0, 141);
             this.documentViewer2.Name = "documentViewer2";
-            this.documentViewer2.Size = new System.Drawing.Size(1165, 464);
+            this.documentViewer2.Size = new System.Drawing.Size(1799, 735);
             this.documentViewer2.TabIndex = 1;
             // 
             // documentViewerRibbonController1
@@ -362,7 +362,7 @@
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemProgressBar1,
             this.repositoryItemZoomTrackBar1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1165, 141);
+            this.ribbonControl1.Size = new System.Drawing.Size(1799, 141);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.True;
             // 
@@ -1498,16 +1498,16 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewStaticItem2);
             this.ribbonStatusBar1.ItemLinks.Add(this.zoomTrackBarEditItem1);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 605);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 876);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1165, 27);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1799, 27);
             // 
             // Form_BC_CongTrinhDangThucHien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 632);
+            this.ClientSize = new System.Drawing.Size(1799, 903);
             this.Controls.Add(this.documentViewer2);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
