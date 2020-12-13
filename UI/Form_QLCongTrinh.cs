@@ -176,7 +176,7 @@ namespace UI
             btnCapNhat.Enabled = btnThem.Enabled = btnXoa.Enabled = false;
             btnLuu.Enabled = true;
             enableOptions(true);
-
+            dateNgayHoanThanh.Enabled = false;
         }
 
         private void loadDataCellCongTrinh()
@@ -270,6 +270,11 @@ namespace UI
         private void Form_QLCongTrinh_Activated(object sender, EventArgs e)
         {
             loadDataCellCongTrinh();
+        }
+
+        private void dateNgayKetThuc_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -488,3 +488,4 @@ C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\UI\obj\Debug\UI.csproj.CopyComp
 C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\UI\obj\Debug\UI.exe
 C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\UI\obj\Debug\UI.pdb
 C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\UI\obj\Debug\UI.Form_TimKiemCongTrinh.resources
+C:\Users\ADMIN\OneDrive\Desktop\C-_QuanLyLaoDong\UI\obj\Debug\UI.Form_TimKiemCongViec.resources

@@ -367,5 +367,27 @@ namespace UI
                 }
             }
         }
+
+        private void btn_TimKiemCongViec_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form_TimKiemCongViec form = new Form_TimKiemCongViec();
+
+            if (f_TimKiemCongViec == true)
+            {
+                form.MdiParent = this;
+                form.Show();
+                f_TimKiemCongViec = false;
+            }
+            else
+            {
+                foreach (XtraForm item in this.MdiChildren)
+                {
+                    if (item is Form_TimKiemCongViec)
+                    {
+                        item.Activate();
+                    }
+                }
+            }
+        }
     }
 }

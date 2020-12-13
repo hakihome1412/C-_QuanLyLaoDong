@@ -103,8 +103,8 @@
             this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup12 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -743,6 +743,7 @@
             this.btn_TimKiemCongViec.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_TimKiemCongViec.ImageOptions.LargeImage")));
             this.btn_TimKiemCongViec.LargeWidth = 100;
             this.btn_TimKiemCongViec.Name = "btn_TimKiemCongViec";
+            this.btn_TimKiemCongViec.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_TimKiemCongViec_ItemClick);
             // 
             // btn_DoiMatKhauu
             // 
@@ -799,8 +800,8 @@
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5,
-            this.ribbonPageGroup11,
-            this.ribbonPageGroup12});
+            this.ribbonPageGroup12,
+            this.ribbonPageGroup11});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "Nhân Viên";
             // 
@@ -810,17 +811,17 @@
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Thêm - Xóa - Cập Nhật";
             // 
-            // ribbonPageGroup11
-            // 
-            this.ribbonPageGroup11.ItemLinks.Add(this.btn_CapNhatThongTinCaNhan);
-            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
-            this.ribbonPageGroup11.Text = "Cập Nhật Thông Tin";
-            // 
             // ribbonPageGroup12
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.btn_QLCongViec);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "Quản Lý Công Việc Của Công Trình";
+            // 
+            // ribbonPageGroup11
+            // 
+            this.ribbonPageGroup11.ItemLinks.Add(this.btn_CapNhatThongTinCaNhan);
+            this.ribbonPageGroup11.Name = "ribbonPageGroup11";
+            this.ribbonPageGroup11.Text = "Cập Nhật Thông Tin";
             // 
             // ribbonPage4
             // 

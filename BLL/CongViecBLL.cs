@@ -260,5 +260,19 @@ namespace BLL
                 return false;
             }
         }
+
+        public int soNguoiThucHienCongViec(string idCongViec,string idCongTrinh)
+        {
+            DanhSachCongViecCongTrinh a = db.DanhSachCongViecCongTrinhs.Where(p => p.idCongViec == idCongViec && p.idCongTrinh == idCongTrinh).SingleOrDefault();
+
+            if(a == null)
+            {
+                return -1;
+            }
+
+            List<DanhSachPhanCong> list = db.DanhSachPhanCongs.Where(p => p.idDSCongViecCongTrinh == a.id).ToList();
+
+            return list.Count;
+        }
     }
 }

@@ -73,6 +73,13 @@
             this.tbTenNhanVien = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.tbMaNhanVien = new DevExpress.XtraEditors.TextEdit();
+            this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbSoNguoiThucHien = new DevExpress.XtraEditors.TextEdit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbTenCongTrinh = new DevExpress.XtraEditors.TextEdit();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbTenCongViec = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
@@ -94,6 +101,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbSoCongViec.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenNhanVien.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbMaNhanVien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
+            this.groupControl7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbSoNguoiThucHien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTenCongTrinh.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTenCongViec.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // defaultLookAndFeel1
@@ -158,6 +170,7 @@
             this.dataGridView_DanhSachCongViecCuaCongTrinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_DanhSachCongViecCuaCongTrinh.Size = new System.Drawing.Size(822, 412);
             this.dataGridView_DanhSachCongViecCuaCongTrinh.TabIndex = 56;
+            this.dataGridView_DanhSachCongViecCuaCongTrinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_DanhSachCongViecCuaCongTrinh_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -521,7 +534,7 @@
             this.groupControl5.Location = new System.Drawing.Point(3, 11);
             this.groupControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(354, 215);
+            this.groupControl5.Size = new System.Drawing.Size(354, 231);
             this.groupControl5.TabIndex = 72;
             this.groupControl5.Text = "Thông Tin Nhân Viên";
             // 
@@ -531,9 +544,9 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label4.Location = new System.Drawing.Point(9, 148);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(184, 17);
+            this.label4.Size = new System.Drawing.Size(192, 17);
             this.label4.TabIndex = 64;
-            this.label4.Text = "Số công việc đang thực hiện";
+            this.label4.Text = "Số Công Việc Đang Thực Hiện";
             // 
             // tbSoCongViec
             // 
@@ -586,11 +599,90 @@
             this.tbMaNhanVien.Size = new System.Drawing.Size(340, 30);
             this.tbMaNhanVien.TabIndex = 59;
             // 
+            // groupControl7
+            // 
+            this.groupControl7.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.groupControl7.Appearance.Options.UseBackColor = true;
+            this.groupControl7.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.groupControl7.Controls.Add(this.label7);
+            this.groupControl7.Controls.Add(this.tbSoNguoiThucHien);
+            this.groupControl7.Controls.Add(this.label8);
+            this.groupControl7.Controls.Add(this.tbTenCongTrinh);
+            this.groupControl7.Controls.Add(this.label9);
+            this.groupControl7.Controls.Add(this.tbTenCongViec);
+            this.groupControl7.Location = new System.Drawing.Point(3, 282);
+            this.groupControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupControl7.Name = "groupControl7";
+            this.groupControl7.Size = new System.Drawing.Size(354, 243);
+            this.groupControl7.TabIndex = 73;
+            this.groupControl7.Text = "Thông Tin Công Việc";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label7.Location = new System.Drawing.Point(9, 156);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(200, 17);
+            this.label7.TabIndex = 64;
+            this.label7.Text = "Số Người Thực Hiện Công Việc:";
+            // 
+            // tbSoNguoiThucHien
+            // 
+            this.tbSoNguoiThucHien.Enabled = false;
+            this.tbSoNguoiThucHien.Location = new System.Drawing.Point(9, 176);
+            this.tbSoNguoiThucHien.Name = "tbSoNguoiThucHien";
+            this.tbSoNguoiThucHien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.tbSoNguoiThucHien.Properties.Appearance.Options.UseFont = true;
+            this.tbSoNguoiThucHien.Size = new System.Drawing.Size(340, 30);
+            this.tbSoNguoiThucHien.TabIndex = 63;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label8.Location = new System.Drawing.Point(9, 98);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 17);
+            this.label8.TabIndex = 62;
+            this.label8.Text = "Công Trình:";
+            // 
+            // tbTenCongTrinh
+            // 
+            this.tbTenCongTrinh.Enabled = false;
+            this.tbTenCongTrinh.Location = new System.Drawing.Point(9, 118);
+            this.tbTenCongTrinh.Name = "tbTenCongTrinh";
+            this.tbTenCongTrinh.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.tbTenCongTrinh.Properties.Appearance.Options.UseFont = true;
+            this.tbTenCongTrinh.Size = new System.Drawing.Size(340, 30);
+            this.tbTenCongTrinh.TabIndex = 61;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label9.Location = new System.Drawing.Point(9, 44);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(101, 17);
+            this.label9.TabIndex = 60;
+            this.label9.Text = "Tên Công Việc:";
+            // 
+            // tbTenCongViec
+            // 
+            this.tbTenCongViec.Enabled = false;
+            this.tbTenCongViec.Location = new System.Drawing.Point(9, 65);
+            this.tbTenCongViec.Name = "tbTenCongViec";
+            this.tbTenCongViec.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.tbTenCongViec.Properties.Appearance.Options.UseFont = true;
+            this.tbTenCongViec.Size = new System.Drawing.Size(340, 30);
+            this.tbTenCongViec.TabIndex = 59;
+            // 
             // Form_PhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1799, 903);
+            this.Controls.Add(this.groupControl7);
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl6);
@@ -626,6 +718,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbSoCongViec.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTenNhanVien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbMaNhanVien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
+            this.groupControl7.ResumeLayout(false);
+            this.groupControl7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbSoNguoiThucHien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTenCongTrinh.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTenCongViec.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -675,5 +773,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private DevExpress.XtraEditors.SimpleButton btnPhanCongViec;
+        private DevExpress.XtraEditors.GroupControl groupControl7;
+        private System.Windows.Forms.Label label7;
+        private DevExpress.XtraEditors.TextEdit tbSoNguoiThucHien;
+        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.TextEdit tbTenCongTrinh;
+        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.TextEdit tbTenCongViec;
     }
 }

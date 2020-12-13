@@ -28,7 +28,7 @@ namespace UI
             dataGridView1.AutoGenerateColumns = dataGridView2.AutoGenerateColumns = dataGridView3.AutoGenerateColumns = false;
 
             dataGridView3.DataSource = cvBLL.getAllCongViec();
-            dataGridView1.DataSource = ctBLL.getAllCongTrinh();
+            dataGridView1.DataSource = ctBLL.getAllCongTrinh_DangThucHien_QuaHan();
             dataGridView2.DataSource = cvBLL.getCongViecByIdCongTrinh(ctBLL.getIdCongTrinhFirst());
 
         }

@@ -32,7 +32,7 @@ namespace UI
 
             dataGridView_CongViecCuaNhanVien.AutoGenerateColumns = dataGridView_DanhSachCongTrinh.AutoGenerateColumns = dataGridView_DanhSachCongViecCuaCongTrinh.AutoGenerateColumns = dataGridView_NhanVienTrongPhongBan.AutoGenerateColumns  = false;
 
-            dataGridView_DanhSachCongTrinh.DataSource = ctBLL.getAllCongTrinh();
+            dataGridView_DanhSachCongTrinh.DataSource = ctBLL.getAllCongTrinh_DangThucHien_QuaHan();
            
         }
 
@@ -61,6 +61,13 @@ namespace UI
             Form_Main.f_PhanCong = true;
         }
 
+        private void loadDataCongViec()
+        {
+            tbTenCongViec.Text = dataGridView_DanhSachCongViecCuaCongTrinh.CurrentRow.Cells[1].Value.ToString();
+            tbTenCongTrinh.Text = dataGridView_DanhSachCongTrinh.CurrentRow.Cells[1].Value.ToString();
+            tbSoNguoiThucHien.Text = cvBLL.soNguoiThucHienCongViec(dataGridView_DanhSachCongViecCuaCongTrinh.CurrentRow.Cells[0].Value.ToString(), dataGridView_DanhSachCongTrinh.CurrentRow.Cells[0].Value.ToString()).ToString();
+        }
+
         private void Form_PhanCong_Load(object sender, EventArgs e)
         {
             dataGridView_NhanVienTrongPhongBan.DataSource = nvBLL.getNhanVienByIdPhongBan(Form_Main.idPhongBan);
@@ -70,13 +77,14 @@ namespace UI
                 dataGridView_DanhSachCongViecCuaCongTrinh.DataSource = cvBLL.getCongViecByIdCongTrinh(dataGridView_DanhSachCongTrinh.CurrentRow.Cells[0].Value.ToString());
             }
             loadDataCongViecCuaNhanVien();
-
+            loadDataCongViec();
         }
 
         private void dataGridView_DanhSachCongTrinh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridView_DanhSachCongViecCuaCongTrinh.DataSource = null;
             dataGridView_DanhSachCongViecCuaCongTrinh.DataSource = cvBLL.getCongViecByIdCongTrinh(dataGridView_DanhSachCongTrinh.CurrentRow.Cells[0].Value.ToString());
+            loadDataCongViec();
         }
 
         private void btnPhanCongViec_Click(object sender, EventArgs e)
@@ -100,6 +108,8 @@ namespace UI
                 {
                     dataGridView_CongViecCuaNhanVien.DataSource = null;
                     dataGridView_CongViecCuaNhanVien.DataSource = cvBLL.getCongViecByIdNhanVien(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString());
+                    loadDataCongViec();
+                    loadDataNhanVien();
                     XtraMessageBox.Show("Phân công thành công");
                 }
                 else
@@ -123,6 +133,8 @@ namespace UI
                 {
                     dataGridView_CongViecCuaNhanVien.DataSource = null;
                     dataGridView_CongViecCuaNhanVien.DataSource = cvBLL.getCongViecByIdNhanVien(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString());
+                    loadDataCongViec();
+                    loadDataNhanVien();
                     XtraMessageBox.Show("Thao tác thành công");
                 }
                 else
@@ -182,6 +194,11 @@ namespace UI
                 dataGridView_DanhSachCongViecCuaCongTrinh.DataSource = cvBLL.getCongViecByIdCongTrinh(dataGridView_DanhSachCongTrinh.CurrentRow.Cells[0].Value.ToString());
             }
             loadDataCongViecCuaNhanVien();
+        }
+
+        private void dataGridView_DanhSachCongViecCuaCongTrinh_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            loadDataCongViec();
         }
     }
 }

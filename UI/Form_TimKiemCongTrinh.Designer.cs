@@ -113,6 +113,7 @@
             this.idCongTrinh.HeaderText = "ID Công Trình";
             this.idCongTrinh.Name = "idCongTrinh";
             this.idCongTrinh.ReadOnly = true;
+            this.idCongTrinh.Width = 200;
             // 
             // tenCongTrinh
             // 
@@ -121,7 +122,7 @@
             this.tenCongTrinh.HeaderText = "Tên Công Trình";
             this.tenCongTrinh.Name = "tenCongTrinh";
             this.tenCongTrinh.ReadOnly = true;
-            this.tenCongTrinh.Width = 120;
+            this.tenCongTrinh.Width = 400;
             // 
             // diaChi
             // 
@@ -191,6 +192,7 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit tbTenCongTrinh;
         private DevExpress.XtraEditors.GroupControl groupControl3;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCongTrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenCongTrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
@@ -198,6 +200,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayKetThucDuKien;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayHoanThanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangThai;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

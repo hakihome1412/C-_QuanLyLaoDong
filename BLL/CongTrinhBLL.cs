@@ -32,6 +32,21 @@ namespace BLL
             return eList;
         }
 
+        public List<eCongTrinh> getAllCongTrinh_DangThucHien_QuaHan()
+        {
+            List<CongTrinh> list = db.CongTrinhs.Where(p => p.isDelete == false && p.trangThai != "Hoàn Thành").ToList();
+            List<eCongTrinh> eList = new List<eCongTrinh>();
+
+            foreach (CongTrinh item in list)
+            {
+                string a = item.idCongTrinh;
+                eCongTrinh e = new eCongTrinh(item.idCongTrinh, item.tenCongTrinh, item.diaChi, (DateTime)item.ngayBatDau, (DateTime)item.ngayKetThucDuKien, (DateTime)item.ngayHoanThanh, item.trangThai, (bool)item.isDelete);
+                eList.Add(e);
+            }
+
+            return eList;
+        }
+
         public string getIdCongTrinhFirst()
         {
             CongTrinh a = db.CongTrinhs.ToList().FirstOrDefault();

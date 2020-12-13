@@ -151,6 +151,12 @@
     <Compile Include="Form_TimKiemCongTrinh.Designer.cs">
       <DependentUpon>Form_TimKiemCongTrinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_TimKiemCongViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TimKiemCongViec.Designer.cs">
+      <DependentUpon>Form_TimKiemCongViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Form_QLCongTrinh.cs">
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TimKiemCongTrinh.resx">
       <DependentUpon>Form_TimKiemCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TimKiemCongViec.resx">
+      <DependentUpon>Form_TimKiemCongViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -41,10 +41,10 @@
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.panelQuanLyDM = new System.Windows.Forms.Panel();
+            this.comboBoxTrangThai = new System.Windows.Forms.ComboBox();
             this.dateNgayHoanThanh = new System.Windows.Forms.DateTimePicker();
             this.dateNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.dateNgayBatDau = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxTrangThai = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbDiaChi = new System.Windows.Forms.RichTextBox();
@@ -70,7 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.panelQuanLyDM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxTrangThai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -207,10 +206,10 @@
             // 
             // panelQuanLyDM
             // 
+            this.panelQuanLyDM.Controls.Add(this.comboBoxTrangThai);
             this.panelQuanLyDM.Controls.Add(this.dateNgayHoanThanh);
             this.panelQuanLyDM.Controls.Add(this.dateNgayKetThuc);
             this.panelQuanLyDM.Controls.Add(this.dateNgayBatDau);
-            this.panelQuanLyDM.Controls.Add(this.comboBoxTrangThai);
             this.panelQuanLyDM.Controls.Add(this.label7);
             this.panelQuanLyDM.Controls.Add(this.label6);
             this.panelQuanLyDM.Controls.Add(this.tbDiaChi);
@@ -226,6 +225,20 @@
             this.panelQuanLyDM.Size = new System.Drawing.Size(538, 376);
             this.panelQuanLyDM.TabIndex = 53;
             // 
+            // comboBoxTrangThai
+            // 
+            this.comboBoxTrangThai.Enabled = false;
+            this.comboBoxTrangThai.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTrangThai.FormattingEnabled = true;
+            this.comboBoxTrangThai.Items.AddRange(new object[] {
+            "Đang Thực Hiện",
+            "Hoàn Thành",
+            "Quá Hạn"});
+            this.comboBoxTrangThai.Location = new System.Drawing.Point(192, 322);
+            this.comboBoxTrangThai.Name = "comboBoxTrangThai";
+            this.comboBoxTrangThai.Size = new System.Drawing.Size(334, 31);
+            this.comboBoxTrangThai.TabIndex = 1020;
+            // 
             // dateNgayHoanThanh
             // 
             this.dateNgayHoanThanh.Checked = false;
@@ -233,7 +246,7 @@
             this.dateNgayHoanThanh.Enabled = false;
             this.dateNgayHoanThanh.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayHoanThanh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayHoanThanh.Location = new System.Drawing.Point(192, 216);
+            this.dateNgayHoanThanh.Location = new System.Drawing.Point(192, 270);
             this.dateNgayHoanThanh.Name = "dateNgayHoanThanh";
             this.dateNgayHoanThanh.Size = new System.Drawing.Size(334, 30);
             this.dateNgayHoanThanh.TabIndex = 1019;
@@ -245,10 +258,11 @@
             this.dateNgayKetThuc.Enabled = false;
             this.dateNgayKetThuc.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgayKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayKetThuc.Location = new System.Drawing.Point(192, 272);
+            this.dateNgayKetThuc.Location = new System.Drawing.Point(192, 214);
             this.dateNgayKetThuc.Name = "dateNgayKetThuc";
             this.dateNgayKetThuc.Size = new System.Drawing.Size(334, 30);
             this.dateNgayKetThuc.TabIndex = 1018;
+            this.dateNgayKetThuc.ValueChanged += new System.EventHandler(this.dateNgayKetThuc_ValueChanged);
             // 
             // dateNgayBatDau
             // 
@@ -260,22 +274,6 @@
             this.dateNgayBatDau.Name = "dateNgayBatDau";
             this.dateNgayBatDau.Size = new System.Drawing.Size(334, 30);
             this.dateNgayBatDau.TabIndex = 1017;
-            // 
-            // comboBoxTrangThai
-            // 
-            this.comboBoxTrangThai.Enabled = false;
-            this.comboBoxTrangThai.Location = new System.Drawing.Point(192, 328);
-            this.comboBoxTrangThai.Name = "comboBoxTrangThai";
-            this.comboBoxTrangThai.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTrangThai.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxTrangThai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxTrangThai.Properties.Items.AddRange(new object[] {
-            "Đang Thực Hiện",
-            "Hoàn Thành",
-            "Quá Hạn"});
-            this.comboBoxTrangThai.Size = new System.Drawing.Size(334, 30);
-            this.comboBoxTrangThai.TabIndex = 1016;
             // 
             // label7
             // 
@@ -518,7 +516,6 @@
             this.groupControl2.ResumeLayout(false);
             this.panelQuanLyDM.ResumeLayout(false);
             this.panelQuanLyDM.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxTrangThai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -552,7 +549,6 @@
         private System.Windows.Forms.RichTextBox tbDiaChi;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private System.Windows.Forms.Label label7;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxTrangThai;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.GroupControl groupControl3;
         private DevExpress.XtraEditors.GroupControl groupControl4;
@@ -570,5 +566,6 @@
         private System.Windows.Forms.DateTimePicker dateNgayKetThuc;
         private System.Windows.Forms.DateTimePicker dateNgayBatDau;
         private System.Windows.Forms.DateTimePicker dateNgayHoanThanh;
+        private System.Windows.Forms.ComboBox comboBoxTrangThai;
     }
 }
