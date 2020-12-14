@@ -54,24 +54,23 @@ namespace UI
             eNhanVien nv = nvBLL.getNhanVienById(idNhanVienDangNhap);
             idPhongBan = nv.idPhongBan;
             data = nvBLL.getNhanVienByIdPhongBan(idPhongBan);
-            //MessageBox.Show(data.Count.ToString());
+
             aa = pbBLL.getPhongBanById(idPhongBan);
 
-            if (kq == 1)
+            if (kq == 1) //là quản lý của các phòng còn lại
             {
-                btn_QuanLyCongTrinh.Visibility = btn_QuanLyDanhMuc.Visibility = BarItemVisibility.Never;
-
+                ribbonPageGroup5.Visible = ribbonPageGroup12.Visible = ribbonPageGroup6.Visible = false;
             }
 
-            if (kq == 2)
+            if (kq == 2) //là nhân viên phòng dự án
             {
-                btn_QuanLyNhanVien.Visibility = BarItemVisibility.Never;
-                ribbonPageGroup3.Visible = false;
+                ribbonPage1.Visible = false;
             }
 
-            if (kq == 3)
+            if (kq == 3) //là nhân viên của các phòng còn lại
             {
-                ribbonPageGroup3.Visible = ribbonPageGroup13.Visible = false;
+                ribbonPage1.Visible = false;
+                ribbonPageGroup5.Visible = ribbonPageGroup12.Visible = ribbonPageGroup6.Visible = false;
             }
         }
 
