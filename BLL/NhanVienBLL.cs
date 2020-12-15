@@ -98,13 +98,18 @@ namespace BLL
             return false;
         }
 
-        public bool xoaPhanCongCongViec(int idPhanCong)
+        public bool xoaPhanCongCongViec(int idPhanCong, string idNhanVien)
         {
-            DanhSachPhanCong a = db.DanhSachPhanCongs.Where(p => p.id == idPhanCong).SingleOrDefault();
+            DanhSachPhanCong a = db.DanhSachPhanCongs.Where(p => p.id == idPhanCong && p.idNhanVien == idNhanVien).SingleOrDefault();
+            List<DanhSachChamCong> aa = db.DanhSachChamCongs.Where(p => p.idPhanCong == idPhanCong && p.idNhanVien == idNhanVien).ToList();
 
             if(a != null)
             {
                 db.DanhSachPhanCongs.DeleteOnSubmit(a);
+                foreach(DanhSachChamCong item in aa)
+                {
+                    db.DanhSachChamCongs.DeleteOnSubmit(item);
+                }
                 db.SubmitChanges();
                 return true;
             }

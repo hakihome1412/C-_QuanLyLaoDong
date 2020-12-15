@@ -207,7 +207,7 @@ namespace BLL
         {
             CongViec aa = new CongViec();
             aa.idCongViec = idTuDongTang();
-            aa.idCongViec = a.tenCongViec;
+            aa.tenCongViec = a.tenCongViec;
             aa.isDelete = false;
 
             if (!db.CongViecs.Contains(aa))

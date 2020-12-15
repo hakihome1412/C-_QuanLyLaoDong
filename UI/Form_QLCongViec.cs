@@ -208,27 +208,35 @@ namespace UI
                 }
                 else
                 {
-                    eCongViec a = new eCongViec(tbTenCongViec.Text);
-                    bool kq = cvBLL.themCongViec(a);
+                    try{
+                        MessageBox.Show(tbTenCongViec.Text);
+                        eCongViec a = new eCongViec(tbTenCongViec.Text);
+                        bool kq = cvBLL.themCongViec(a);
 
-                    if (kq)
-                    {
-                        XtraMessageBox.Show("Thêm công việc thành công");
+                        if (kq)
+                        {
+                            XtraMessageBox.Show("Thêm công việc thành công");
 
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Thêm công việc thất bại !!!");
+                        }
+
+                        dataGridView3.DataSource = null;
+                        dataGridView3.DataSource = cvBLL.getAllCongViec();
+                        loadDataDetailCongViec();
+                        btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
+                        btnLuu.Enabled = false;
+                        enableOptions(false);
+                        trangThaiLuu = -1;
+                        btnThem.Text = "Thêm Mới";
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        XtraMessageBox.Show("Thêm công việc thất bại !!!");
+                        MessageBox.Show(ex.ToString());
                     }
-
-                    dataGridView3.DataSource = null;
-                    dataGridView3.DataSource = cvBLL.getAllCongViec();
-                    loadDataDetailCongViec();
-                    btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
-                    btnLuu.Enabled = false;
-                    enableOptions(false);
-                    trangThaiLuu = -1;
-                    btnThem.Text = "Thêm Mới";
+                   
                 }
               
             }

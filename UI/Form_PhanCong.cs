@@ -63,9 +63,12 @@ namespace UI
 
         private void loadDataCongViec()
         {
-            tbTenCongViec.Text = dataGridView_DanhSachCongViecCuaCongTrinh.CurrentRow.Cells[1].Value.ToString();
-            tbTenCongTrinh.Text = dataGridView_DanhSachCongTrinh.CurrentRow.Cells[1].Value.ToString();
-            tbSoNguoiThucHien.Text = cvBLL.soNguoiThucHienCongViec(dataGridView_DanhSachCongViecCuaCongTrinh.CurrentRow.Cells[0].Value.ToString(), dataGridView_DanhSachCongTrinh.CurrentRow.Cells[0].Value.ToString()).ToString();
+            if(cvBLL.getCongViecByIdCongTrinh(dataGridView_DanhSachCongTrinh.CurrentRow.Cells[0].Value.ToString()).Count != 0)
+            {
+                tbTenCongViec.Text = dataGridView_DanhSachCongViecCuaCongTrinh.CurrentRow.Cells[1].Value.ToString();
+                tbTenCongTrinh.Text = dataGridView_DanhSachCongTrinh.CurrentRow.Cells[1].Value.ToString();
+                tbSoNguoiThucHien.Text = cvBLL.soNguoiThucHienCongViec(dataGridView_DanhSachCongViecCuaCongTrinh.CurrentRow.Cells[0].Value.ToString(), dataGridView_DanhSachCongTrinh.CurrentRow.Cells[0].Value.ToString()).ToString();
+            }
         }
 
         private void Form_PhanCong_Load(object sender, EventArgs e)
@@ -127,7 +130,7 @@ namespace UI
             dialog = XtraMessageBox.Show("Bạn có muốn xóa phân công này không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
-                bool kq = nvBLL.xoaPhanCongCongViec((int)dataGridView_CongViecCuaNhanVien.CurrentRow.Cells[3].Value);
+                bool kq = nvBLL.xoaPhanCongCongViec((int)dataGridView_CongViecCuaNhanVien.CurrentRow.Cells[3].Value,dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString());
 
                 if (kq)
                 {
