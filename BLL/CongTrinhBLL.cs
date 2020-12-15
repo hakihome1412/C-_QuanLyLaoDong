@@ -152,5 +152,22 @@ namespace BLL
                 return false;
             }
         }
+
+        public void capNhatTrangThaiQuaHan()
+        {
+            List<CongTrinh> list = db.CongTrinhs.ToList();
+
+            DateTime dateDefault = new DateTime(1900, 1, 1);
+
+            foreach(CongTrinh item in list)
+            {
+                if(item.ngayKetThucDuKien < DateTime.Now && item.ngayHoanThanh == dateDefault)
+                {
+                    item.trangThai = "Quá Hạn";
+                }
+            }
+
+            db.SubmitChanges();
+        }
     }
 }

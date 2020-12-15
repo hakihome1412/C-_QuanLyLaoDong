@@ -37,6 +37,7 @@ namespace UI
 
         NhanVienBLL nvBLL;
         PhongBanBLL pbBLL;
+        CongTrinhBLL ctBLL;
 
         ePhongBan aa;
         List<eNhanVien> data;
@@ -46,6 +47,7 @@ namespace UI
             InitializeComponent();
             nvBLL = new NhanVienBLL();
             pbBLL = new PhongBanBLL();
+            ctBLL = new CongTrinhBLL();
         }
 
         private void Form_Main_Load(object sender, EventArgs e)
@@ -72,6 +74,8 @@ namespace UI
                 ribbonPage1.Visible = false;
                 ribbonPageGroup5.Visible = ribbonPageGroup12.Visible = ribbonPageGroup6.Visible = false;
             }
+
+            ctBLL.capNhatTrangThaiQuaHan();
         }
 
 

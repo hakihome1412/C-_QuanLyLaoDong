@@ -259,7 +259,7 @@
             // 
             this.btnXoaCVCongTrinh.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnXoaCVCongTrinh.Appearance.Options.UseFont = true;
-            this.btnXoaCVCongTrinh.Location = new System.Drawing.Point(429, 67);
+            this.btnXoaCVCongTrinh.Location = new System.Drawing.Point(434, 208);
             this.btnXoaCVCongTrinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoaCVCongTrinh.Name = "btnXoaCVCongTrinh";
             this.btnXoaCVCongTrinh.Size = new System.Drawing.Size(141, 95);
@@ -271,7 +271,7 @@
             // 
             this.btnThemCVCongTrinh.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnThemCVCongTrinh.Appearance.Options.UseFont = true;
-            this.btnThemCVCongTrinh.Location = new System.Drawing.Point(428, 209);
+            this.btnThemCVCongTrinh.Location = new System.Drawing.Point(433, 66);
             this.btnThemCVCongTrinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemCVCongTrinh.Name = "btnThemCVCongTrinh";
             this.btnThemCVCongTrinh.Size = new System.Drawing.Size(142, 95);
@@ -284,7 +284,7 @@
             this.btnLuu.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnLuu.Appearance.Options.UseFont = true;
             this.btnLuu.Enabled = false;
-            this.btnLuu.Location = new System.Drawing.Point(234, 209);
+            this.btnLuu.Location = new System.Drawing.Point(241, 208);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(141, 95);
@@ -296,7 +296,7 @@
             // 
             this.btnXoa.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.Location = new System.Drawing.Point(37, 209);
+            this.btnXoa.Location = new System.Drawing.Point(44, 208);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(145, 95);
@@ -308,7 +308,7 @@
             // 
             this.btnThem.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.Location = new System.Drawing.Point(37, 67);
+            this.btnThem.Location = new System.Drawing.Point(44, 66);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(145, 95);
@@ -320,7 +320,7 @@
             // 
             this.btnCapNhat.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnCapNhat.Appearance.Options.UseFont = true;
-            this.btnCapNhat.Location = new System.Drawing.Point(234, 67);
+            this.btnCapNhat.Location = new System.Drawing.Point(241, 66);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(141, 95);
