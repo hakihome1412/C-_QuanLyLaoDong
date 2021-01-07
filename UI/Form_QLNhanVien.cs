@@ -106,10 +106,23 @@ namespace UI
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            trangThaiLuu = 1;
-            btnCapNhat.Enabled = btnThem.Enabled = btnXoa.Enabled = false;
-            btnLuu.Enabled = true;
-            enableOptions(true);
+            if (trangThaiLuu == -1)
+            {
+                trangThaiLuu = 1;
+                btnThem.Enabled = btnXoa.Enabled = false;
+                btnLuu.Enabled = true;
+                enableOptions(true);
+                btnCapNhat.Text = "Hủy";
+            }
+            else
+            {
+                trangThaiLuu = -1;
+                btnCapNhat.Text = "Cập Nhật";
+                enableOptions(false);
+                btnLuu.Enabled = false;
+                btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
+                loadDataCellNhanVien();
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -182,7 +195,7 @@ namespace UI
                         btnLuu.Enabled = false;
                         enableOptions(false);
                         trangThaiLuu = -1;
-                        btnThem.Text = "Thêm mới";
+                        btnThem.Text = "Thêm Mới";
                     }
                 }
             }
@@ -219,6 +232,8 @@ namespace UI
                         btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
                         btnLuu.Enabled = false;
                         enableOptions(false);
+                        trangThaiLuu = -1;
+                        btnCapNhat.Text = "Cập Nhật";
                     }
                 }              
             }

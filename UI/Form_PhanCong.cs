@@ -92,64 +92,95 @@ namespace UI
 
         private void btnPhanCongViec_Click(object sender, EventArgs e)
         {
-            string idNhanVien = dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString();
-            string idCongTrinh = dataGridView_DanhSachCongTrinh.CurrentRow.Cells[0].Value.ToString();
-            string idCongViec = dataGridView_DanhSachCongViecCuaCongTrinh.CurrentRow.Cells[0].Value.ToString();
-            DateTime ngayBatDau = (DateTime) dateNgayBatDau.Value;
-            DateTime ngayKetThuc = (DateTime)dateNgayKetThuc.Value;
-            string tenNhanVien = dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[1].Value.ToString();
-
-            if(ngayBatDau >= ngayKetThuc)
+            try
             {
-                XtraMessageBox.Show("Ngày bắt đầu công việc phải nhỏ hơn hoặc bằng ngày kết thúc công việc");
-            }
-            else
-            {
-                bool kq = nvBLL.phanCongNhanVien(idNhanVien, idCongTrinh, idCongViec, ngayBatDau, ngayKetThuc);
+                string idNhanVien = dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString();
+                string idCongTrinh = dataGridView_DanhSachCongTrinh.CurrentRow.Cells[0].Value.ToString();
+                DateTime ngayBatDau = (DateTime)dateNgayBatDau.Value;
+                DateTime ngayKetThuc = (DateTime)dateNgayKetThuc.Value;
+                string tenNhanVien = dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[1].Value.ToString();
 
-                if (kq)
+                int countCongViec = cvBLL.getCongViecByIdCongTrinh(dataGridView_DanhSachCongTrinh.CurrentRow.Cells[0].Value.ToString()).Count;
+                if (countCongViec == 0)
                 {
-                    dataGridView_CongViecCuaNhanVien.DataSource = null;
-                    dataGridView_CongViecCuaNhanVien.DataSource = cvBLL.getCongViecByIdNhanVien(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString());
-                    loadDataCongViec();
-                    loadDataNhanVien();
-                    XtraMessageBox.Show("Phân công thành công");
+                    XtraMessageBox.Show("Công trình này chưa có công việc nào !");
                 }
                 else
                 {
-                    XtraMessageBox.Show("Nhân viên " + tenNhanVien + " đã được phân công vào công việc này !!!");
+                    if (ngayBatDau > ngayKetThuc)
+                    {
+                        XtraMessageBox.Show("Ngày bắt đầu công việc phải nhỏ hơn ngày kết thúc công việc");
+                    }
+                    else
+                    {
+                        string idCongViec = dataGridView_DanhSachCongViecCuaCongTrinh.CurrentRow.Cells[0].Value.ToString();
+                        bool kq = nvBLL.phanCongNhanVien(idNhanVien, idCongTrinh, idCongViec, ngayBatDau, ngayKetThuc);
 
+                        if (kq)
+                        {
+                            dataGridView_CongViecCuaNhanVien.DataSource = null;
+                            dataGridView_CongViecCuaNhanVien.DataSource = cvBLL.getCongViecByIdNhanVien(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString());
+                            loadDataCongViec();
+                            loadDataNhanVien();
+                            XtraMessageBox.Show("Phân công thành công");
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Nhân viên " + tenNhanVien + " đã được phân công vào công việc này !!!");
+
+                        }
+                    }
                 }
             }
-           
+            catch (Exception ex)
+            {
+                MessageBox.Show("có lỗi");
+            }   
         }
 
         private void btnXoaPhanCongCongViec_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = new DialogResult();
-            dialog = XtraMessageBox.Show("Bạn có muốn xóa phân công này không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialog == DialogResult.Yes)
-            {
-                bool kq = nvBLL.xoaPhanCongCongViec((int)dataGridView_CongViecCuaNhanVien.CurrentRow.Cells[3].Value,dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString());
-
-                if (kq)
+            try
+            {               
+                int countDSPhanCong = cvBLL.getCongViecByIdNhanVien(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString()).Count;
+                if(countDSPhanCong == 0)
                 {
-                    dataGridView_CongViecCuaNhanVien.DataSource = null;
-                    dataGridView_CongViecCuaNhanVien.DataSource = cvBLL.getCongViecByIdNhanVien(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString());
-                    loadDataCongViec();
-                    loadDataNhanVien();
-                    XtraMessageBox.Show("Thao tác thành công");
+                    XtraMessageBox.Show("Nhân viên chưa được phân công công việc nào !");
                 }
                 else
                 {
-                    XtraMessageBox.Show("Thao tác thất bại !!!");
-                }
-            }
-            else
-            {
-                dialog = DialogResult.Cancel;
+                    DialogResult dialog = new DialogResult();
+                    dialog = XtraMessageBox.Show("Bạn có muốn xóa phân công này không ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        bool kq = nvBLL.xoaPhanCongCongViec((int)dataGridView_CongViecCuaNhanVien.CurrentRow.Cells[3].Value, dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString());
 
-            } 
+                        if (kq)
+                        {
+                            dataGridView_CongViecCuaNhanVien.DataSource = null;
+                            dataGridView_CongViecCuaNhanVien.DataSource = cvBLL.getCongViecByIdNhanVien(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString());
+                            loadDataCongViec();
+                            loadDataNhanVien();
+                            XtraMessageBox.Show("Thao tác thành công");
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show("Thao tác thất bại !!!");
+                        }
+                    }
+                    else
+                    {
+                        dialog = DialogResult.Cancel;
+
+                    }
+                }
+               
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("có lỗi");
+            }
+           
         }
 
         private void tbTimKiemNhanVien_KeyDown(object sender, KeyEventArgs e)

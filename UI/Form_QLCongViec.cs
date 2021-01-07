@@ -84,48 +84,61 @@ namespace UI
 
         private void btnThemCVCongTrinh_Click(object sender, EventArgs e)
         {
-            string tenCongViecThem = dataGridView3.CurrentRow.Cells[1].Value.ToString();
-            string tenCongTrinhDuocThem = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            bool kq = cvBLL.themCongViecVaoCongTrinh(dataGridView3.CurrentRow.Cells[0].Value.ToString(), dataGridView1.CurrentRow.Cells[0].Value.ToString());
-
-            if (kq)
+            try
             {
-                XtraMessageBox.Show("Thêm công việc " + tenCongViecThem + " vào công trình " + tenCongTrinhDuocThem + " thành công");
-                dataGridView2.DataSource = null;
-                dataGridView2.DataSource = cvBLL.getCongViecByIdCongTrinh(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            }
-            else
-            {
-                XtraMessageBox.Show("Đã tồn tại công việc này trong dự án !!!");
-            }
-        }
-
-        private void btnXoaCVCongTrinh_Click(object sender, EventArgs e)
-        {
-            DialogResult dialog = new DialogResult();
-            dialog = XtraMessageBox.Show("Bạn có muốn xóa công việc này ra khỏi dự án ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if(dialog == DialogResult.Yes)
-            {
-                bool kq = cvBLL.xoaCongViecKhoiCongTrinh(dataGridView2.CurrentRow.Cells[0].Value.ToString(), dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                string tenCongViecThem = dataGridView3.CurrentRow.Cells[1].Value.ToString();
+                string tenCongTrinhDuocThem = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                bool kq = cvBLL.themCongViecVaoCongTrinh(dataGridView3.CurrentRow.Cells[0].Value.ToString(), dataGridView1.CurrentRow.Cells[0].Value.ToString());
 
                 if (kq)
                 {
-                    XtraMessageBox.Show("Thao tác thành công");
+                    XtraMessageBox.Show("Thêm công việc " + tenCongViecThem + " vào công trình " + tenCongTrinhDuocThem + " thành công");
                     dataGridView2.DataSource = null;
                     dataGridView2.DataSource = cvBLL.getCongViecByIdCongTrinh(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                 }
                 else
                 {
-                    XtraMessageBox.Show("Thao tác thất bại !!!");
+                    XtraMessageBox.Show("Đã tồn tại công việc này trong dự án !!!");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                dialog = DialogResult.Cancel;
+                MessageBox.Show("có lỗi");
             }
 
-          
+        }
+
+        private void btnXoaCVCongTrinh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult dialog = new DialogResult();
+                dialog = XtraMessageBox.Show("Bạn có muốn xóa công việc này ra khỏi dự án ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialog == DialogResult.Yes)
+                {
+                    bool kq = cvBLL.xoaCongViecKhoiCongTrinh(dataGridView2.CurrentRow.Cells[0].Value.ToString(), dataGridView1.CurrentRow.Cells[0].Value.ToString());
+
+                    if (kq)
+                    {
+                        XtraMessageBox.Show("Thao tác thành công");
+                        dataGridView2.DataSource = null;
+                        dataGridView2.DataSource = cvBLL.getCongViecByIdCongTrinh(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Thao tác thất bại !!!");
+                    }
+                }
+                else
+                {
+                    dialog = DialogResult.Cancel;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("có lỗi");
+            }       
         }
 
         private void Form_QLCongViec_FormClosed(object sender, FormClosedEventArgs e)

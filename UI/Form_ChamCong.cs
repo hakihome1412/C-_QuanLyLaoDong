@@ -57,32 +57,48 @@ namespace UI
 
         private void btnPhanCongViec_Click(object sender, EventArgs e)
         {
-            bool kq = nvBLL.chamCong(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString(), (int)dataGridView_CongViecCuaNhanVien.CurrentRow.Cells[3].Value, 1);
+            try
+            {
+                bool kq = nvBLL.chamCong(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString(), (int)dataGridView_CongViecCuaNhanVien.CurrentRow.Cells[3].Value, 1);
 
-            if (kq)
-            {
-                XtraMessageBox.Show("Thao tác thành công");
-                loadDataCongViecCuaNhanVien();
+                if (kq)
+                {
+                    XtraMessageBox.Show("Thao tác thành công");
+                    loadDataCongViecCuaNhanVien();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Thao tác thất bại !!!");
+                }
             }
-            else
+            catch(Exception ex)
             {
-                XtraMessageBox.Show("Thao tác thất bại !!!");
+                MessageBox.Show("Có lỗi");
             }
+          
         }
 
         private void btnXoaPhanCongCongViec_Click(object sender, EventArgs e)
         {
-            bool kq = nvBLL.chamCong(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString(), (int)dataGridView_CongViecCuaNhanVien.CurrentRow.Cells[3].Value, 2);
+            try
+            {
+                bool kq = nvBLL.chamCong(dataGridView_NhanVienTrongPhongBan.CurrentRow.Cells[0].Value.ToString(), (int)dataGridView_CongViecCuaNhanVien.CurrentRow.Cells[3].Value, 2);
 
-            if (kq)
-            {
-                XtraMessageBox.Show("Thao tác thành công");
-                loadDataCongViecCuaNhanVien();
+                if (kq)
+                {
+                    XtraMessageBox.Show("Thao tác thành công");
+                    loadDataCongViecCuaNhanVien();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Thao tác thất bại !!!");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                XtraMessageBox.Show("Thao tác thất bại !!!");
+                MessageBox.Show("Có lỗi");
             }
+
         }
 
         private void Form_ChamCong_Activated(object sender, EventArgs e)

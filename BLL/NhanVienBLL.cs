@@ -183,10 +183,14 @@ namespace BLL
             aa.chucVu = 1;
             aa.idPhongBan = a.idPhongBan;
             aa.isDelete = false;
+            TaiKhoan bb = new TaiKhoan();
+            bb.idTaiKhoan = aa.idNhanVien;
+            bb.matKhau = "123";
 
             if (!db.NhanViens.Contains(aa))
             {
                 db.NhanViens.InsertOnSubmit(aa);
+                db.TaiKhoans.InsertOnSubmit(bb);
                 db.SubmitChanges();
                 return true;
             }
