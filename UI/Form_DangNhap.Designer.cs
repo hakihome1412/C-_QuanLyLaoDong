@@ -53,7 +53,7 @@
             // 
             // tbMatKhau
             // 
-            this.tbMatKhau.EditValue = "123";
+            this.tbMatKhau.EditValue = "";
             this.tbMatKhau.Location = new System.Drawing.Point(199, 175);
             this.tbMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMatKhau.Name = "tbMatKhau";
@@ -119,6 +119,7 @@
             this.Name = "Form_DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_DangNhap_FormClosed);
             this.Load += new System.EventHandler(this.Form_DangNhap_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_DangNhap_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form_DangNhap_KeyPress);

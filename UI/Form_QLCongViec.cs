@@ -61,6 +61,7 @@ namespace UI
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             loadDataCellCongTrinh();
+
         }
 
         private void loadDataCellCongTrinh()
@@ -156,7 +157,7 @@ namespace UI
             else
             {
                 trangThaiLuu = -1;
-                btnThem.Text = "Thêm mới";
+                btnThem.Text = "Thêm Mới";
                 enableOptions(false);
                 btnLuu.Enabled = false;
                 btnCapNhat.Enabled = btnXoa.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
@@ -208,37 +209,32 @@ namespace UI
                 }
                 else
                 {
-                    try{
-                        MessageBox.Show(tbTenCongViec.Text);
-                        eCongViec a = new eCongViec(tbTenCongViec.Text);
-                        bool kq = cvBLL.themCongViec(a);
 
-                        if (kq)
-                        {
-                            XtraMessageBox.Show("Thêm công việc thành công");
+                    MessageBox.Show(tbTenCongViec.Text);
+                    eCongViec a = new eCongViec(tbTenCongViec.Text);
+                    bool kq = cvBLL.themCongViec(a);
 
-                        }
-                        else
-                        {
-                            XtraMessageBox.Show("Thêm công việc thất bại !!!");
-                        }
-
-                        dataGridView3.DataSource = null;
-                        dataGridView3.DataSource = cvBLL.getAllCongViec();
-                        loadDataDetailCongViec();
-                        btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
-                        btnLuu.Enabled = false;
-                        enableOptions(false);
-                        trangThaiLuu = -1;
-                        btnThem.Text = "Thêm Mới";
-                    }
-                    catch (Exception ex)
+                    if (kq)
                     {
-                        MessageBox.Show(ex.ToString());
+                        XtraMessageBox.Show("Thêm công việc thành công");
+
                     }
-                   
+                    else
+                    {
+                        XtraMessageBox.Show("Thêm công việc thất bại !!!");
+                    }
+
+                    dataGridView3.DataSource = null;
+                    dataGridView3.DataSource = cvBLL.getAllCongViec();
+                    loadDataDetailCongViec();
+                    btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
+                    btnLuu.Enabled = false;
+                    enableOptions(false);
+                    trangThaiLuu = -1;
+                    btnThem.Text = "Thêm Mới";
+
                 }
-              
+
             }
             else //Cập nhật
             {
@@ -269,6 +265,8 @@ namespace UI
                     btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
                     btnLuu.Enabled = false;
                     enableOptions(false);
+                    trangThaiLuu = -1;
+                    btnCapNhat.Text = "Cập Nhật";
                 }
               
             }
@@ -276,15 +274,34 @@ namespace UI
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            trangThaiLuu = 1;
-            btnCapNhat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = false;
-            btnLuu.Enabled = true;
-            enableOptions(true);
+            if (trangThaiLuu == -1)
+            {
+                trangThaiLuu = 1;
+                btnThem.Enabled = btnXoa.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = false;
+                btnLuu.Enabled = true;
+                enableOptions(true);
+                btnCapNhat.Text = "Hủy";
+            }
+            else
+            {
+                trangThaiLuu = -1;
+                btnCapNhat.Text = "Cập Nhật";
+                enableOptions(false);
+                btnLuu.Enabled = false;
+                btnThem.Enabled = btnXoa.Enabled = btnThemCVCongTrinh.Enabled = btnXoaCVCongTrinh.Enabled = true;
+                loadDataDetailCongViec();
+            }
         }
 
         private void Form_QLCongViec_Activated(object sender, EventArgs e)
         {
             loadDataDetailCongViec();
+            dataGridView3.DataSource = null;
+            dataGridView1.DataSource = null;
+            dataGridView2.DataSource = null;
+            dataGridView3.DataSource = cvBLL.getAllCongViec();
+            dataGridView1.DataSource = ctBLL.getAllCongTrinh_DangThucHien_QuaHan();
+            dataGridView2.DataSource = cvBLL.getCongViecByIdCongTrinh(ctBLL.getIdCongTrinhFirst());
         }
 
         private void groupControl1_Paint(object sender, PaintEventArgs e)

@@ -80,7 +80,7 @@ namespace UI
             else
             {
                 trangThaiLuu = -1;
-                btnThem.Text = "Thêm mới";
+                btnThem.Text = "Thêm Mới";
                 enableOptions(false);
                 btnLuu.Enabled = false;
                 btnCapNhat.Enabled = btnXoa.Enabled = true;
@@ -145,25 +145,35 @@ namespace UI
                     }
                     else
                     {
-                        eCongTrinh a = new eCongTrinh(dataGridView1.CurrentRow.Cells[0].Value.ToString(), tbTenCongTrinh.Text, tbDiaChi.Text, (DateTime)dateNgayBatDau.Value, (DateTime)dateNgayKetThuc.Value, (DateTime)dateNgayHoanThanh.Value, comboBoxTrangThai.Text);
-                        bool kq = ctBLL.capNhatCongTrinh(a);
-
-                        if (kq)
+                        if(comboBoxTrangThai.Text == "Đang Thực Hiện")
                         {
-                            XtraMessageBox.Show("Cập nhật công trình thành công");
-
+                            XtraMessageBox.Show("Trạng thái chỉ được cập nhật khi Quá Hạn hoặc Hoàn Thành !");
                         }
                         else
                         {
-                            XtraMessageBox.Show("Cập nhật công trình thất bại !!!");
-                        }
+                            eCongTrinh a = new eCongTrinh(dataGridView1.CurrentRow.Cells[0].Value.ToString(), tbTenCongTrinh.Text, tbDiaChi.Text, (DateTime)dateNgayBatDau.Value, (DateTime)dateNgayKetThuc.Value, (DateTime)dateNgayHoanThanh.Value, comboBoxTrangThai.Text);
+                            bool kq = ctBLL.capNhatCongTrinh(a);
 
-                        dataGridView1.DataSource = null;
-                        dataGridView1.DataSource = ctBLL.getAllCongTrinh();
-                        loadDataCellCongTrinh();
-                        btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
-                        btnLuu.Enabled = false;
-                        enableOptions(false);
+                            if (kq)
+                            {
+                                XtraMessageBox.Show("Cập nhật công trình thành công");
+
+                            }
+                            else
+                            {
+                                XtraMessageBox.Show("Cập nhật công trình thất bại !!!");
+                            }
+
+                            dataGridView1.DataSource = null;
+                            dataGridView1.DataSource = ctBLL.getAllCongTrinh();
+                            loadDataCellCongTrinh();
+                            btnCapNhat.Enabled = btnXoa.Enabled = btnThem.Enabled = true;
+                            btnLuu.Enabled = false;
+                            enableOptions(false);
+                            trangThaiLuu = -1;
+                            btnCapNhat.Text = "Cập Nhật";
+                        }
+                       
                     }
                 }
                
@@ -172,11 +182,24 @@ namespace UI
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            trangThaiLuu = 1;
-            btnCapNhat.Enabled = btnThem.Enabled = btnXoa.Enabled = false;
-            btnLuu.Enabled = true;
-            enableOptions(true);
-            dateNgayHoanThanh.Enabled = false;
+            if (trangThaiLuu == -1)
+            {
+                trangThaiLuu = 1;
+                btnCapNhat.Text = "Hủy";
+                btnThem.Enabled = btnXoa.Enabled = false;
+                btnLuu.Enabled = true;
+                enableOptions(true);
+                dateNgayHoanThanh.Enabled = false;       
+            }
+            else
+            {
+                trangThaiLuu = -1;
+                btnCapNhat.Text = "Cập Nhật";
+                enableOptions(false);
+                btnLuu.Enabled = false;
+                btnCapNhat.Enabled = btnXoa.Enabled =btnThem.Enabled = true;
+                loadDataCellCongTrinh();
+            }
         }
 
         private void loadDataCellCongTrinh()
@@ -233,7 +256,7 @@ namespace UI
             btnXoa.Enabled = btnCapNhat.Enabled = btnThem.Enabled = true;
             enableOptions(false);
             btnLuu.Enabled = false;
-            btnThem.Text = "Thêm mới";
+            btnThem.Text = "Thêm Mới";
             trangThaiLuu = -1;
         }
 

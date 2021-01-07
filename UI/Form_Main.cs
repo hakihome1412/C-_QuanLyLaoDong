@@ -16,7 +16,6 @@ namespace UI
 {
     public partial class Form_Main : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public static bool statusLogin = false;
         public static string idNhanVienDangNhap = "";
         public static string idPhongBan = "";
 
@@ -346,6 +345,25 @@ namespace UI
 
         private void btn_DangXuatt_ItemClick(object sender, ItemClickEventArgs e)
         {
+            f_QLCongTrinh = true;
+            f_QLCongViec = true;
+            f_DoiMatKhau = true;
+            f_ThongTinCaNhan = true;
+            f_PhanCong = true;
+            f_QLNhanVien = true;
+            f_ChamCong = true;
+            f_BC_TatCaCongTrinh = true;
+            f_BC_CongTrinhQuaHan = true;
+            f_BC_CongTrinhDangThucHien = true;
+            f_BC_CongTrinhDaHoanThanh = true;
+            f_BC_TatCaNhanVien = true;
+            f_TimKiemCongTrinh = true;
+            f_TimKiemCongViec = true;
+            //Form_PhanCong fPC = new Form_PhanCong();
+            //fPC.Close();
+            this.Hide();
+            Form_DangNhap fDN = new Form_DangNhap();
+            fDN.ShowDialog();
             this.Close();
         }
 

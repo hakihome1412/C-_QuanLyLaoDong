@@ -48,10 +48,11 @@ namespace UI
                 }
                 else
                 {
-                    //XtraMessageBox.Show("Đăng nhập thành công");
-                    this.Close();
-                    Form_Main.statusLogin = true;
+                    Hide();
+                    Form_Main fMain = new Form_Main();
                     Form_Main.idNhanVienDangNhap = tbTaiKhoan.Text;
+                    fMain.ShowDialog();
+                    Close();
                 }
             }
         }
@@ -90,9 +91,11 @@ namespace UI
                     else
                     {
                         //XtraMessageBox.Show("Đăng nhập thành công");
-                        this.Close();
-                        Form_Main.statusLogin = true;
+                        Hide();
+                        Form_Main fMain = new Form_Main();
                         Form_Main.idNhanVienDangNhap = tbTaiKhoan.Text;
+                        fMain.ShowDialog();
+                        Close();
                     }
                 }
             }
@@ -117,12 +120,18 @@ namespace UI
                     else
                     {
                         //XtraMessageBox.Show("Đăng nhập thành công");
-                        this.Close();
-                        Form_Main.statusLogin = true;
+                        Hide();
+                        Form_Main fMain = new Form_Main();
                         Form_Main.idNhanVienDangNhap = tbTaiKhoan.Text;
+                        fMain.ShowDialog();
+                        Close();
                     }
                 }
             }
+        }
+
+        private void Form_DangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
         }
     }
 }

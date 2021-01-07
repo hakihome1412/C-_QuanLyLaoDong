@@ -62,6 +62,7 @@ namespace UI
                     else
                     {
                         XtraMessageBox.Show("Đổi mật khẩu thành công");
+                        Close();
                     }
                 }
             }

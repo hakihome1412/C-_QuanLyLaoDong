@@ -17,15 +17,6 @@ namespace UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_DangNhap());
-
-            if (Form_Main.statusLogin)
-            {
-                Application.Run(new Form_Main());
-            }
-            else
-            {
-                Application.Run(new Form_DangNhap());
-            }
         }
     }
 }
